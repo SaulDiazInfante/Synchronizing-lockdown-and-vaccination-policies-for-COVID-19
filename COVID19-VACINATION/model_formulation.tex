@@ -48,12 +48,16 @@ during the exponential grow phase. Our dynamics reads
     \end{aligned}
 \end{equation}
 %
-     See table[*] for notation and values.
+     See \Cref{tbl:dynamics_base_parameters} for notation and references
+     values.
 \begin{table*}[h!]
 	\centering
-	\begin{tabular}{>{\centering}p{0.2\textwidth}p{0.6\textwidth}}
+	\begin{tabular}{>{\centering}%
+        p{0.2\textwidth}%
+        p{0.4\textwidth}
+    }
 		\toprule
-		Parameter & Description
+		\textbf{Parameter} & \textbf{Description}
   	\\
   	\midrule
 		$\mu$ &
@@ -102,8 +106,20 @@ during the exponential grow phase. Our dynamics reads
 	\end{tabular}
 		\caption{
 			Parameters definition of model in
-			\cref{eqn:base_dynamics}.}\label{table1}
+			\Cref{eqn:base_dynamics}.}
+    \label{tbl:dynamics_base_parameters}
 \end{table*}
+%
+\begin{figure*}[htb]
+    \centering
+    \includegraphics[scale=0.8, keepaspectratio]{./cdmx_input_data}
+    \caption{%
+        Cummulative new symptomatic and confirmed COVID19 reported cases from
+        Ciudad de Mexico between March, 10, to March 30 of 2020.
+    }
+    \label{fig:data_CDMX}
+\end{figure*}
+%
 \begin{figure*}[htb]
 	\centering
    	\includegraphics[scale=0.8, keepaspectratio]{./cdmx_CIs_data_begining_fit}
@@ -111,6 +127,7 @@ during the exponential grow phase. Our dynamics reads
    		Fit of diary new cases of Mexico city
    		during exponential growth.
    	}
+    \label{fig:data_CDMX_fitting}
 \end{figure*}
 %
     \paragraph{Hypothesis} 
@@ -158,6 +175,6 @@ during the exponential grow phase. Our dynamics reads
 		}
 \end{equation*}
 
-    Figure [...] displays data of coumulative confirmed cases of COVID-19 of
-Mexico city, and the fitt of our model in
-\cref{eqn:base_dynamics,eqn:boservation_model}.
+    \Cref{fig:data_CDMX_fitting} displays data of coumulative confirmed cases 
+of COVID-19 of Mexico city, and the fitt of our model in
+\Cref{eqn:base_dynamics,eqn:boservation_model}.

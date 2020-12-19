@@ -1,8 +1,8 @@
-%!TEX root = main.tex   
+%!TEX root = main.tex
 \paragraph{Controlled Model}
 Now wee model vaccination, treatment and lockdown as a optimal control problem.
-According to dynamics in \cref{eqn:base_dynamics}, we modulate the vaccination
-rate by a time-dependent control signal  $u_V(t)$. We add  
+According to dynamics in \Cref{eqn:base_dynamics}, we modulate the vaccination
+rate with a time-dependent control signal  $u_V(t)$. We add
 compartment $X_{vac}$
 to count all the vaccine applications of susceptible, exposed, asymptomatic and
 recovered individuals. This process is modeled by
@@ -28,12 +28,12 @@ J(u_V):=
   %\right)
   ds.
 \end{equation}
-In other words, we assume in functional $J$ that pandemic cost is proportional 
+In other words, we assume in functional $J$ that pandemic cost is proportional
 to the symptomatic and death reported cases and that a vaccination policy
 implies quadratic consumption of resources.
 
     Further, since we aim to simulate vaccination policies at differentcoverage
-scenarios, we impose the vaccination counter state's final time condition 
+scenarios, we impose the vaccination counter state's final time condition
 $X(T)$
 \begin{equation}
     \begin{aligned}
@@ -67,12 +67,12 @@ we estimate the constant vaccination rate as the solution of
 \begin{equation}
     x_{coverage} = 1 - \exp(-\lambda_V T).
 \end{equation}
-    That is, $\lambda_V$ denotes the constant rate
+    That is, $\lambda_v$ denotes the constant rate
 to cover  a fraction $x_{coverage}$ in time horizon $T$.
 Thus, according to this vaccination rate, we postulate a policy $u_v$ that
 modulates vaccination rate according to $\lambda_V$ as a baseline. That is,
 optimal vaccination amplifies or attenuates the estimated baseline
-$\lambda_V$ in a interval $[\lambda_V^{\min}, \lambda_V^{\max}]$
+$\lambda_V$ in a interval $[\lambda_v^{\min}, \lambda_v^{\max}]$
 to optimize functional $J(\cdot)$\textemdash minimizing
 symptomatic, death reported cases and optimizing resources.
 
@@ -167,9 +167,9 @@ solve the following optimal control problem (OCP).
                 \frac{\beta_A I_A + \beta_S I_S}{N^{\star}}
         \\
         \\
-            L(0) &= L_0, 
-            \ S(0) = S_0, 
-            \ E(0) = E_0, 
+            L(0) &= L_0,
+            \ S(0) = S_0,
+            \ E(0) = E_0,
             \ I_S(0) = I_{S_{0}},
       \\
             I_A(0) &= I_{A_{0}},
@@ -181,7 +181,7 @@ solve the following optimal control problem (OCP).
       \\
             X_{vac}(T) &= x_{coverage},
       \quad
-            \kappa I_S(t) \leq B, \qquad 
+            \kappa I_S(t) \leq B, \qquad
             \forall t \in [0, T],
       \\
             N^{\star}(t) &=

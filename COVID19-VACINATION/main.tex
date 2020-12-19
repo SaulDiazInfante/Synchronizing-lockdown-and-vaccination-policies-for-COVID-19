@@ -1,5 +1,4 @@
-%\documentclass[5p, sort&compress]{elsarticle}
-\documentclass[3p, sort&compress]{elsarticle}
+\documentclass[5p, sort&compress]{elsarticle}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}{}
@@ -10,8 +9,9 @@
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{graphicx}
-\usepackage{cleveref}
+\usepackage[nameinlink,noabbrev]{cleveref}
 \usepackage{changes}
+\graphicspath{{./Figures/}}
 \definechangesauthor[color=orange]{SDIV}
 \begin{document}
   \input{frontmatter}
@@ -21,15 +21,13 @@
     \input{model_formulation}
   \section{Imperfect-preventive Covid-19 vaccination}
     \input{vaccination_model}
-  \section{Vaccination reproductive number}
-    \input{vaccination_r_not}
-    \input{BRN}
-  \section{Optimal controlled version}
-    \input{cotrolled_version}
   \section{Parameter callibration}
     \input{parameters_callibration}
-  \section{Numerical Results}   
-  \section{Conclusion}
+  \section{Vaccination reproductive number}
+  \section{Optimal controlled version}
+    \input{cotrolled_version}
+  \section{Optimal control problem}
+  \section{Numerical Results}
   \appendix
   \section{Appendix}
     \input{appendix}
