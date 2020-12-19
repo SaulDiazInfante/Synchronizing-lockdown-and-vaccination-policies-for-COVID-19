@@ -1,0 +1,191 @@
+%!TEX root = main.tex   
+\paragraph{Controlled Model}
+Now wee model vaccination, treatment and lockdown as a optimal control problem.
+According to dynamics in \cref{eqn:base_dynamics}, we modulate the vaccination
+rate by a time-dependent control signal  $u_V(t)$. We add  
+compartment $X_{vac}$
+to count all the vaccine applications of susceptible, exposed, asymptomatic and
+recovered individuals. This process is modeled by
+\begin{equation}
+\label{eqn:counter}
+  X'(t) =
+    (\lambda_V + u_V(t))(S + E + I_A + R)
+\end{equation}
+and describes the number of applied vaccines at time $t$.
+Consider
+$$x(t):= (L, S, E, I_S, I_A, H, R, D, V, X_{vac})^{\top}(t)$$
+and  control signal $u_v(\cdot)$. We quantify the cost and reward of a vaccine
+strategy policy via the penalization functional
+\begin{equation}
+\label{eqn:cost_functional}
+J(u_V):=
+  \int _0 ^ T
+  a_S I_S + a_d D +
+  \frac{1}{2}
+  %\left(
+    c_V u_v^2
+    % + c_T u_T^2
+  %\right)
+  ds.
+\end{equation}
+In other words, we assume in functional $J$ that pandemic cost is proportional 
+to the symptomatic and death reported cases and that a vaccination policy
+implies quadratic consumption of resources.
+
+    Further, since we aim to simulate vaccination policies at differentcoverage
+scenarios, we impose the vaccination counter state's final time condition 
+$X(T)$
+\begin{equation}
+    \begin{aligned}
+      x(T) &= (\cdot, \cdot, \cdot, \cdot, \cdot, X_{vac }(T))^{\top},
+      \in \Omega
+      \\
+      X_{vac}(T)
+        &= x_{cover age},
+      \\
+      x_{coverage}
+        & \in
+        \left \{
+          \text{Low(0.2)},\text{Mid(0.5)}, \text{High(0.8)}
+        \right \} .
+    \end{aligned}
+\end{equation}
+    Thus, given the time horizon $T$, we impose that the last fraction of
+vaccinated populations corresponds to 20\%, 50\% or 80\%, and
+the rest of final states as free. We also impose the path constraint
+\begin{equation}
+    \label{eqn:path_constrain}
+    \Phi(x,t):= \kappa I_S(t) \leq B,
+    \qquad \forall t \in [0, T],
+\end{equation}
+to ensure that healthcare services will not be overloaded. Here $\kappa$
+denotes hospitalization rate, and $B$ is the load capacity of a
+health system.
+
+    Given a fixed time horizon and vaccine efficiency,
+we estimate the constant vaccination rate as the solution of
+\begin{equation}
+    x_{coverage} = 1 - \exp(-\lambda_V T).
+\end{equation}
+    That is, $\lambda_V$ denotes the constant rate
+to cover  a fraction $x_{coverage}$ in time horizon $T$.
+Thus, according to this vaccination rate, we postulate a policy $u_v$ that
+modulates vaccination rate according to $\lambda_V$ as a baseline. That is,
+optimal vaccination amplifies or attenuates the estimated baseline
+$\lambda_V$ in a interval $[\lambda_V^{\min}, \lambda_V^{\max}]$
+to optimize functional $J(\cdot)$\textemdash minimizing
+symptomatic, death reported cases and optimizing resources.
+
+    Our objective is minimize the cost functional
+\eqref{eqn:cost_functional}\textemdash over an appropriated functional
+space\textemdash subject to the dynamics in
+\cref{eqn:base_dynamics,eqn:counter}, boundary conditions, and the path
+constrain in \eqref{eqn:path_constrain}.
+That is, we search for vaccination policies $u_V(\cdot)$, which
+solve the following optimal control problem (OCP).
+\begin{equation}
+    \label{eqn:vital_dynamics}
+    \begin{aligned}
+        \min_{u \in \mathcal{U}} J(u) & :=
+                % a_{I_S} Y_{I_S}(T) +
+                % a_{D} D(T) +
+                % a_{H}
+                % \int_{0}^T
+                  %\delta_H I_S
+                  %H(s)
+                % \ ds
+                \int_{0} ^ T
+                [\left(
+                    a_D \mu_s + a_H \delta_H
+                \right) I_S(r) +
+                a_{I_S} p  \kappa E(r) ]\ dr
+        \\
+            \text{s. t.} &
+        \\
+            L' & =  \theta \mu N^{\star}
+                -\epsilon \lambda L - u_L(t) L - \mu L
+        \\
+            S' & =
+                (1 - \theta) \mu N^\star
+                + u_L(t) L
+                + \delta_v V
+                + \delta_R R
+        \\
+                & \qquad -
+                \left[
+                	\lambda + (\lambda_V + u_V(t)) + \mu
+                \right] S
+        \\
+            E' &=
+                \lambda (\epsilon L + (1-\varepsilon) V + S)
+                - (\kappa + \mu) E
+        \\
+            I_S' &=
+                p \kappa E
+                % + (1 - q) \gamma_M M(t)
+                - (\gamma_S +
+                    \mu_{I_S} +
+                    \delta_H +
+                    %u_M(t) +
+                    \mu) I_S
+        \\
+            I_A' &=
+                (1 - p) \kappa E - (\gamma_A + \mu) I_A
+        \\
+            H' &=
+                \delta_H I_S - (\gamma_H + \mu_H + \mu) H
+        \\
+            R'  &=
+                \gamma_S I_S +
+                \gamma_A I_A +
+                \gamma_H H % +
+                - (\delta_R + \mu) R
+        \\
+            D' &=
+                \mu_{I_S} I_S + \mu_H H
+        \\
+            V' &=
+                (\lambda_V + u_V(t)) S
+                - \left[
+                	(1 - \varepsilon) \lambda
+                	+ \delta_V
+                	+ \mu
+                \right ] V
+        \\
+        \\
+            \frac{dX_{vac}}{dt}
+            	&=
+            	(u_V(t) + \lambda_V)
+            	\left[
+            		L + S + E + I_A + R
+            	\right]
+        \\
+            \frac{d Y_{I_S}}{dt}
+            	& = p \kappa E
+        \\
+            \lambda &:=
+                \frac{\beta_A I_A + \beta_S I_S}{N^{\star}}
+        \\
+        \\
+            L(0) &= L_0, 
+            \ S(0) = S_0, 
+            \ E(0) = E_0, 
+            \ I_S(0) = I_{S_{0}},
+      \\
+            I_A(0) &= I_{A_{0}},
+            H(0) = H_0, \
+            \ R(0) = R_0, \ D(0) = D_0,
+      \\
+            V(0) &= 0, \ X_{vac}(0) = 0, \quad
+            u_V(.) \in [u_{\min}, u^{\max}],
+      \\
+            X_{vac}(T) &= x_{coverage},
+      \quad
+            \kappa I_S(t) \leq B, \qquad 
+            \forall t \in [0, T],
+      \\
+            N^{\star}(t) &=
+                L + S +E + I_S + I_A +
+                H + R + V
+        \end{aligned}
+\end{equation}

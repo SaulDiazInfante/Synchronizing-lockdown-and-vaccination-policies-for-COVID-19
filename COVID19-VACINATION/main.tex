@@ -1,0 +1,39 @@
+%\documentclass[5p, sort&compress]{elsarticle}
+\documentclass[3p, sort&compress]{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}{}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{cleveref}
+\usepackage{changes}
+\definechangesauthor[color=orange]{SDIV}
+\begin{document}
+  \input{frontmatter}
+  \section{Introduction}
+    \input{introduction}
+  \section{Covid-19 spread dynamics}
+    \input{model_formulation}
+  \section{Imperfect-preventive Covid-19 vaccination}
+    \input{vaccination_model}
+  \section{Vaccination reproductive number}
+    \input{vaccination_r_not}
+    \input{BRN}
+  \section{Optimal controlled version}
+    \input{cotrolled_version}
+  \section{Parameter callibration}
+    \input{parameters_callibration}
+  \section{Numerical Results}   
+  \section{Conclusion}
+  \appendix
+  \section{Appendix}
+    \input{appendix}
+  \nocite{*}
+  \bibliography{NovelCovid19.bib}
+  \bibliographystyle{plain}
+\end{document}
