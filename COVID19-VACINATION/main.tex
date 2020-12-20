@@ -1,37 +1,39 @@
-\documentclass[5p, sort&compress]{elsarticle}
+%\documentclass[5p, sort&compress]{elsarticle}
+\documentclass[sort&compress]{elsarticle}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}{}
 \usepackage{amsthm}
 \usepackage{enumerate}
-\usepackage{hyperref}
+\usepackage{lineno, hyperref}
+\modulolinenumbers[1]
 \usepackage{listings}
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{graphicx}
 \usepackage[nameinlink,noabbrev]{cleveref}
-\usepackage{changes}
-\graphicspath{{./Figures/}}
+\usepackage[draft]{changes}
 \definechangesauthor[color=orange]{SDIV}
+\linenumbers
 \begin{document}
-  \input{frontmatter}
-  \section{Introduction}
-    \input{introduction}
-  \section{Covid-19 spread dynamics}
-    \input{model_formulation}
-  \section{Imperfect-preventive Covid-19 vaccination}
-    \input{vaccination_model}
-  \section{Parameter callibration}
-    \input{parameters_callibration}
-  \section{Vaccination reproductive number}
-  \section{Optimal controlled version}
-    \input{cotrolled_version}
-  \section{Optimal control problem}
-  \section{Numerical Results}
-  \appendix
+    \input{frontmatter}
+    \section{Introduction}
+        \input{introduction}
+    \section{Covid-19 spread dynamics}
+        \input{model_formulation}
+    \section{Imperfect-preventive Covid-19 vaccination}
+        \input{vaccination_model}
+    \section{Parameter callibration}
+        \input{parameters_callibration}
+    \section{Vaccination reproductive number}
+        \input{vaccination_r_not}
+    \section{Optimal controlled version}
+        \input{cotrolled_version}
+    \section{Numerical Results}
+    \listofchanges[style=compactsummary]
+    \appendix
   \section{Appendix}
     \input{appendix}
-  \nocite{*}
   \bibliography{NovelCovid19.bib}
   \bibliographystyle{plain}
 \end{document}

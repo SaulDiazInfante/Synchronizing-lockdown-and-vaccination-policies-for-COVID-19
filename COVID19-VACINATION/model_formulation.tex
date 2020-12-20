@@ -112,7 +112,7 @@ during the exponential grow phase. Our dynamics reads
 %
 \begin{figure*}[htb]
     \centering
-    \includegraphics[scale=0.8, keepaspectratio]{./cdmx_input_data}
+    \includegraphics[scale=0.8, keepaspectratio]{Figures/cdmx_input_data}
     \caption{%
         Cummulative new symptomatic and confirmed COVID19 reported cases from
         Ciudad de Mexico between March, 10, to March 30 of 2020.
@@ -130,7 +130,7 @@ during the exponential grow phase. Our dynamics reads
     \label{fig:data_CDMX_fitting}
 \end{figure*}
 %
-    \paragraph{Hypothesis} 
+    \paragraph{Hypothesis}
     	We consider that susceptible individuals become
     infected when they are in contact with asymptomatic individuals and
     individuals with symptoms, we will propose that a proportion of
@@ -138,16 +138,16 @@ during the exponential grow phase. Our dynamics reads
     proportion of individuals infected with symptoms may die from the
     disease or may be relieved.
 
-    	We callibrate parameters of our base dynamics in
+        We callibrate parameters of our base dynamics in
     \eqref{eqn:base_dynamics} via Multichain Montecarlo (MCMC).
     To this end, we assume that the comulative
     incidence of new infected symptomatic cases $CI_S$
     follows a Poisson distribution with mean $\lambda_t = IC_s(t)$. Further,
     following [] we postulate priors for $p$ and $\kappa$
     \begin{equation}
-    	\label{eqn:boservation_model}
-    	\begin{aligned}
-    		Y_t & \sim Poisson(\lambda_t),
+        \label{eqn:boservation_model}
+        \begin{aligned}
+            Y_t & \sim Poisson(\lambda_t),
     		\\
     		\lambda_t
     			&=
@@ -158,7 +158,7 @@ during the exponential grow phase. Our dynamics reads
     			& \kappa \sim \text{Gamma}(10, 50).
     	\end{aligned}
     \end{equation}
-	
+
 	Using the reproductive number definition of VanDenDrishe, we obtain
 \begin{equation*}
 	\label{eqn:reproductive_number}
@@ -175,6 +175,6 @@ during the exponential grow phase. Our dynamics reads
 		}
 \end{equation*}
 
-    \Cref{fig:data_CDMX_fitting} displays data of coumulative confirmed cases 
+    \Cref{fig:data_CDMX_fitting} displays data of coumulative confirmed cases
 of COVID-19 of Mexico city, and the fitt of our model in
 \Cref{eqn:base_dynamics,eqn:boservation_model}.
