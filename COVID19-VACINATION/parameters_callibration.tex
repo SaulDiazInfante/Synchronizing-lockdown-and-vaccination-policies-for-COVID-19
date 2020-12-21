@@ -1,5 +1,62 @@
 %!TEX root = main.tex
+\begin{figure*}[htb]
+    \centering
+    \includegraphics[scale=0.8, keepaspectratio]{./cdmx_CIs_data_begining_fit}
+    \caption{%
+        Fit of diary new cases of Mexico city
+        during exponential growth.
+    }
+    \label{fig:data_CDMX_fitting}
+\end{figure*}
+%
+
 \paragraph{Bayesian estimation}
+We calibrate parameters of our base dynamics in
+\eqref{eqn:base_dynamics} via Multichain Montecarlo (MCMC).
+To this end, we assume that the comulative
+incidence of new infected symptomatic cases $CI_S$
+follows a Poisson distribution with mean $\lambda_t = IC_s(t)$. Further,
+following [] we postulate priors for $p$ and $\kappa$
+\begin{equation}
+    \label{eqn:boservation_model}
+    \begin{aligned}
+        Y_t & \sim Poisson(\lambda_t),
+        \\
+        \lambda_t
+        &=
+        \int_{0}^t p \delta_e E ,
+        \\
+        & p \sim \text{Uniform} (0.3, 0.8),
+        \\
+        & \kappa \sim \text{Gamma}(10, 50).
+    \end{aligned}
+\end{equation}
+%
+\textbf{}\comment[id=SDIV]{Review this $R_0$ calculation with Gabriel}
+Using the reproductive number definition of Van DenDrishe [CITE],
+we obtain
+\begin{equation*}
+    \label{eqn:reproductive_number}
+    R_0 :=
+    \frac{
+        N^{*}(
+        \beta_S p
+        \kappa +
+        \beta_A
+        \kappa(1-p) )
+    }{
+        (\mu - \kappa)
+        ( \gamma_S + \mu_{I_s} + \gamma_A + \mu)
+        N^* \mu
+    }.
+\end{equation*}
+
+\Cref{fig:data_CDMX_fitting} displays data of coumulative confirmed cases
+of COVID-19 of Mexico city, and \Cref{fig:data_CDMX_fitting} displays the fitt
+of our model in \Cref{eqn:base_dynamics,eqn:boservation_model}.
+\Cref{tbl:parameters_values} enclose fixed and estimated parameters to this
+setting.
+
   \begin{table*}
     \centering
     \begin{tabular}{@{}llr@{}}
@@ -162,4 +219,6 @@
       \\
         \bottomrule
     \end{tabular}
+    \caption{Model parameters. Values based mainly in [FNEG]}
+    \label{tbl:parameters_values}
 \end{table*}
