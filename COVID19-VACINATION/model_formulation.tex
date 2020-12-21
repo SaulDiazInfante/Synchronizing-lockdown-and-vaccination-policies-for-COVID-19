@@ -1,50 +1,123 @@
 %!TEX root = main.tex
 \paragraph{Uncontrolled dynamics}
-	We split the the constant population $N$ in a base SEIR
-structure with segregation infected classes according with
-manifestation  of symptoms. We also postulate the extra state $Y_{I_S}$ to fit commulative symptomatic cases reported in the databases from Mexico city
-during the exponential grow phase. Our dynamics reads
+    We split a given population of size $N$ in the base SEIR
+structure with segregation infected classes according to the manifestation
+of symptoms. Let $L, S, E, I_S, I_A, H, R, D$ respectively denote the
+class of an individual according to its current state, namely
+%
+\begin{description}
+    \item[Lockdown $(L)$]
+        All individuals that has with null mobility and that remains under
+        isolation
+    \item[Suceptible $(S)$]
+        Individual under risk
+    \item[Exposed $(E)$]
+        Population fraction that host SARS-CoV-2 but cannot infect
+    \item[Infected-Symptomatic $(I_S)$]
+        Population infected fraction with symptoms and reported as confirmed
+        case
+    \item[Infected-Asymptomatic $(I_A)$]
+        Infected individual whit transitory or null symptoms and unreported
+    \item[Hospitalized $(H)$]
+        Infected population that requires hospitalization or intensive care.
+    \item[Recover or removed $(R)$]
+        Population that recovers from infection and develops partial immunity
+    \item[Death $(D)$]
+        Population fraction that death by COVID-19
+\end{description}
+%
+To fit data of cumulative reported symptomatic cases, we
+postulated the counter state $Y_{I_S}$ and made the following hypothesis.
+%
+%
+\begin{hypotheses}
+    \begin{enumerate}[(H-1)]
+        \item
+            We suppose that at least \SI{30}\percent  of the population is
+            under lock-down and that eventually a fraction of this class move
+            to the susceptible compartment at rate $\delta_L$.
+        \item
+            Force infection is defined as the probablity of acquire COVID-19
+            given the contact with a symptomatic or asympotomatic individual.
+            Thus we normalize under live population
+            $
+                N^{\star}
+            $
+        \item
+            Susceptible individuals become
+            exposed but not infectious
+            %\textemdash exposed individuals
+            %host the virus but can not transmit it.
+            When they are in contact with asymptomatic or symptomatic
+            individuals. Thus $\beta_S$, $\beta_A$ denote
+            probability of infectious given the contact with a symptomatic or
+            asymptomatic infectious individuals.
+        \item
+            After a period of latency of $1/\kappa = \SI{5.1}{days}$, an
+            exposed individual became infected. Being $p$ the probability of
+            develop symptoms and $(1-p)$ the probability of became infectious
+            but asymptomatic. Thus $p\kappa E$ denotes the
+            event of become infectious and develop symptoms given that the
+            individual has been exposed
+        \item
+            Asymptomatic individuals not die or get in a Hospital
+        \item
+            A fraction $\mu_{H}$ of symptomatic individuals
+            die by COVID-19 without hospitalization
+        %\item
+    \end{enumerate}
+
+
+
+,
+\end{hypotheses}
+%\paragraph{Hypothesis}
+
+
+
+
+Thus we formulate the following Ordinary Differential Equation (ODE)
 \begin{equation}
 	\label{eqn:base_dynamics}
     \begin{aligned}
-    	L' & = \theta \mu N^{\star}
+        L' & = \theta \mu N^{\star}
         	-\epsilon \lambda L - \delta_L L - \mu L,
-    	\\
-    	S' & =
-        	(1 - \theta)\mu N^\star + \delta_L  L + \delta_R R
-        	- (\lambda + \mu) S,
-    	\\
-    	E' & =
-        	\lambda (\epsilon L + S) - (\kappa + \mu) E,
-    	\\
-    	I_S' & =
-        	p \kappa E -
-        	(\gamma_S +
-        	    \delta_H +
-        	    \deleted[id=SDIV]{\mu_{I_S}} +
-        	    \mu) I_S,
-    	\\
-    	I_A' &=
-        	(1 - p) \kappa E - (\gamma_A + \mu) I_A,
-    	\\
-    	H' &=
-        	\delta_H I_S - (\gamma_H + \mu_H + \mu) H,
-    	\\
-    	R' & =
-        	\gamma_S I_S + \gamma_A I_A + \gamma_H H - (\delta_R + \mu) R,
-    	\\
-    	D' &=
-        	\deleted[id=SDIV]{\mu_{I_S} I_S +} \mu_H H,
-    	\\
-    	\frac{dY_{I_S}}{dt} &  = p \kappa E,
-    	\\
-    	\lambda &:=
-        	\frac{\beta_A I_A + \beta_S I_S}{N^{\star}},
-    	\\
-    	N^{\star}(t) &=
-        	L + S + E +
-       	 	I_S + I_A +
-        	H + R .
+        \\
+        S' & =
+            (1 - \theta)\mu N^\star + \delta_L  L + \delta_R R
+            - (\lambda + \mu) S,
+        \\
+        E' & =
+            \lambda (\epsilon L + S) - (\kappa + \mu) E,
+        \\
+        I_S' & =
+            p \kappa E -
+            (\gamma_S +
+                \delta_H +
+                \deleted[id=SDIV]{\mu_{I_S}} +
+                \mu) I_S,
+        \\
+        I_A' &=
+            (1 - p) \kappa E - (\gamma_A + \mu) I_A,
+        \\
+        H' &=
+            \delta_H I_S - (\gamma_H + \mu_H + \mu) H,
+        \\
+        R' & =
+            \gamma_S I_S + \gamma_A I_A + \gamma_H H - (\delta_R + \mu) R,
+        \\
+        D' &=
+            \deleted[id=SDIV]{\mu_{I_S} I_S +} \mu_H H,
+        \\
+        \frac{dY_{I_S}}{dt} &  = p \kappa E,
+        \\
+        \lambda &:=
+            \frac{\beta_A I_A + \beta_S I_S}{N^{\star}},
+        \\
+        N^{\star}(t) &=
+            L + S + E +
+            I_S + I_A +
+            H + R .
     \end{aligned}
 \end{equation}
 %
@@ -130,13 +203,6 @@ during the exponential grow phase. Our dynamics reads
     \label{fig:data_CDMX_fitting}
 \end{figure*}
 %
-    \paragraph{Hypothesis}
-    	We consider that susceptible individuals become
-    infected when they are in contact with asymptomatic individuals and
-    individuals with symptoms, we will propose that a proportion of
-    asymptomatic individuals have a way to get relief and not die. A
-    proportion of individuals infected with symptoms may die from the
-    disease or may be relieved.
 
         We callibrate parameters of our base dynamics in
     \eqref{eqn:base_dynamics} via Multichain Montecarlo (MCMC).

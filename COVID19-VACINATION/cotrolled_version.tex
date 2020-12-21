@@ -18,14 +18,14 @@ and  control signal $u_v(\cdot)$. We quantify the cost and reward of a vaccine
 strategy policy via the penalization functional
 \begin{equation}
 \label{eqn:cost_functional}
-J(u_V):=
+J(u_L, u_V):=
   \int _0 ^ T
   a_S I_S + a_d D +
   \frac{1}{2}
-  %\left(
+  \left(
+    c_L u_L^2 +
     c_V u_v^2
-    % + c_T u_T^2
-  %\right)
+  \right)
   ds.
 \end{equation}
 In other words, we assume in functional $J$ that pandemic cost is proportional
@@ -113,7 +113,7 @@ solve the following optimal control problem (OCP).
         \\
                 & \qquad -
                 \left[
-                	\lambda + (\lambda_V + u_V(t)) + \mu
+                \lambda + (\lambda_V + u_V(t)) + \mu
                 \right] S
         \\
             E' &=
