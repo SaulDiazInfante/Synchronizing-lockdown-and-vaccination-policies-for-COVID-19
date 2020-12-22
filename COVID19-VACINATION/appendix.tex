@@ -1,5 +1,7 @@
 %!TEX root = main.tex
-In this appendix, we show the existence of optimal policies in the class of {\it piecewise constant policies}. Consider the following cost functional that we want to minimize
+In this appendix, we show the existence of optimal policies in the class of
+{\it piecewise constant policies}. Consider the following cost functional that
+we want to minimize
 \begin{equation}\label{costFunctional}
   \int_0^T C(X(t),u(t)) dt
 \end{equation}
@@ -7,8 +9,13 @@ subject to the dynamics
 \begin{equation}\label{dynamics}
   \dot{X}(t) = f(X(t),u(t)),  \qquad    0\leq t \leq T,
 \end{equation}
-and the initial state $X(0)=x_0$. The functions $u:[0,T]\to U$ are called {\it control polices}, where $U$ is a subset of some Euclidean space.   %The cost functional \eqref{eqn:cost_functional} and the dynamics \eqref{eqn:vital_dynamics} are particular cases of \eqref{costFunctional} and \eqref{dynamics}, respectively.
-
+and the initial state $X(0)=x_0$. The functions $u:[0,T]\to U$ are called {\it
+control polices}, where $U$ is a subset of some Euclidean space.
+    %The
+    %cost functional \eqref{eqn:cost_functional} and the dynamics
+    %\eqref{eqn:vital_dynamics} are particular cases of \eqref{costFunctional}
+    %and \eqref{dynamics}, respectively.
+%
 Let $t_0<t_1<\ldots <t_n$, with
 $t_0=0$ and $t_n=T$, be a partition of the interval $[0,T]$.
 We consider piecewise constant policies $\tilde{u}$ of the form
@@ -16,10 +23,20 @@ We consider piecewise constant policies $\tilde{u}$ of the form
   \tilde{u}(t) = a_j\qquad t_j\leq t < t_{j+1}
 \end{equation}
  for $j=0,\ldots,n-1$.
+\begin{assumptions}
+    We made the following assumptions.
+    \begin{enumerate}[({A}-1)]
+        \item
+            The function $f$ in the dynamics \eqref{dynamics} is of
+            class $C^1$.
+        \item
+            The cost function $C$ in \eqref{costFunctional} is continuous and
+            the set $U$ is compact.
+    \end{enumerate}
+\end{assumptions}
+%
 
-{\sc Assumption 1}. The function $f$ in the dynamics \eqref{dynamics} is of class $C^1$.
-
-By Assumption 1, the system
+    By Assumption (A-1)\textbf{}, the system
 \[
   \dot{X}(t) = f(X(t),a_0), \quad X(0)=x_0, \qquad    0\leq t \leq t_1,
 \]
@@ -28,12 +45,13 @@ $(x_0,a_0)$.  Next, put $x_1:=\tilde{X}_0(t_1;x_0,a_0)$ and consider the system
 \[
   \dot{X}(t) = f(X(t),a_1), \quad X(t_1)=x_1, \qquad    t_1\leq t \leq t_2,
 \]
-Again, by Assumption 1, the latter system has a unique solution $\tilde{X}_1(t;x_1,a_1)$ which is
+Again, by Assumption (A-1), the latter system has a unique solution
+$\tilde{X}_1(t;x_1,a_1)$ which is
 continuous in $(x_1,a_1)$. By following this procedure, we end up having a
 recursive solution
 \begin{equation*}
   \begin{aligned}
-    & \tilde{X}_{n-1}(t;x_{n-1},a_{n-1}), 
+    & \tilde{X}_{n-1}(t;x_{n-1},a_{n-1}),
     \qquad t_{n-1}\leq t \leq T,\\
     & x_{n-1}:=\tilde{X}_{n-2}(t_{n-1};x_{n-2},a_{n-1}),
   \end{aligned}
@@ -52,20 +70,22 @@ corresponding solution path $\tilde{X}$, we have
         C(\tilde{X}_j(t),a_j) dt.
 \]
 Notice that each $\tilde{X}_j$ is a continuous function of $(a_0,\ldots,a_j)$
-and $x_0$. 
+and $x_0$.
 
-
-{\sc Assumption 2}. The cost function $C$ in \eqref{costFunctional} is continuous and the set $U$ is compact. 
-
-
-
-By Assumption 2, the mapping
+By Assumption (A-2), the mapping
 \[
   (a_0,\ldots,a_{n-1})
   \mapsto
   \sum_{j=0}^{n-1}
   \int_{t_j}^{t_{j+1}} C(\tilde{X}_j(t),a_j) dt
 \]
-is continuous. Since each piecewise constant policy $\tilde{u}$ of the form \eqref{PieceConstCont} can be identified with the vector $(a_0,\ldots,a_{n-1})$ in the compact set $U\times\cdots\times U$, the functional \eqref{costFunctional} attains its minimum in the class of piecewise constant policies.
+is continuous. Since each piecewise constant policy $\tilde{u}$ of the form
+\eqref{PieceConstCont} can be identified with the vector $(a_0,\ldots,a_{n-1})$
+in the compact set $U\times\cdots\times U$, the functional
+\eqref{costFunctional} attains its minimum in the class of piecewise constant
+policies.
 
-The cost functional \eqref{eqn:cost_functional} and the dynamics \eqref{eqn:vital_dynamics} are particular cases of \eqref{costFunctional} and \eqref{dynamics}, respectively, and satisfy Assumptions 1 and 2. Then there exists an optimal vaccination policy of the form \eqref{PieceConstCont}.
+    The cost functional \eqref{eqn:cost_functional} and the dynamics
+\eqref{eqn:vital_dynamics} are particular cases of \eqref{costFunctional} and
+\eqref{dynamics}, respectively, and satisfy Assumptions (A-1) and (A-2). Then
+there exists an optimal vaccination policy of the form \eqref{PieceConstCont}.
