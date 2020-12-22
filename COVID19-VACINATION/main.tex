@@ -1,5 +1,6 @@
 %\documentclass[5p, sort&compress]{elsarticle}
 \documentclass[sort&compress]{elsarticle}
+%\documentclass{cas-sc}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}{}
@@ -17,14 +18,14 @@
 \linenumbers
 \newdefinition{hypotheses}{Hypothesis}
 \begin{document}
-    \input{frontmatter}
+    %\input{frontmatter}
     \section{Introduction}
         \input{introduction}
     \section{Covid-19 spread dynamics}
         \input{model_formulation}
-            \subsection{Parameter callibration}
+        \subsection{Parameter calibration}
             \input{parameters_callibration}
-    \section{Imperfect-preventive Covid-19 vaccination}
+    \section{Imperfect-preventive COVID-19 vaccination}
         \input{vaccination_model}
     \section{Vaccination reproductive number}
         \input{vaccination_r_not}
@@ -33,8 +34,9 @@
     \section{Numerical Results}
     \listofchanges[style=compactsummary]
     \appendix
-  \section{Appendix}
-    \input{appendix}
-  \bibliography{NovelCovid19.bib}
-  \bibliographystyle{plain}
+    \section{Appendix}
+        \input{appendix}
+    \nocite{*}
+    \bibliography{NovelCovid19.bib}
+    \bibliographystyle{plain}
 \end{document}
