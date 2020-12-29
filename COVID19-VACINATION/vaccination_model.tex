@@ -10,7 +10,7 @@
     \label{eqn:vacination_dynamics}
     \begin{aligned}
         L' =&  \theta \mu N^{\star}
-                -(\epsilon \lambda + \delta_L + \mu) L 
+                -(\epsilon \lambda + \delta_L + \lambda_V +\mu) L 
         \\
         S' =&
         	(1 - \theta) \mu N^\star
@@ -53,7 +53,7 @@
                 \mu_{I_S} I_S + \mu_H H
         \\
         V' = &
-            \lambda_V  S
+            \lambda_V  (S + L)
             - \left[
             	(1 - \varepsilon) \lambda
                 + \delta_V
@@ -65,7 +65,7 @@
             	&=
             	(u_V(t) + \lambda_V)
             	\left[
-            		S + E + I_A + R
+            		L + S + E + I_A + R
             	\right]
         \\
             \frac{d Y_{I_S}}{dt}
