@@ -7,8 +7,9 @@ class of an individual according to its current state, namely
 %
 \begin{description}
     \item[Lockdown $(L)$]
-        All individuals that has with null mobility and that remains under
-        isolation
+        All individuals that has low or null mobility and that remains under
+        isolation. Thus individual in this class reduce its probability of
+        contagious.
     \item[Suceptible $(S)$]
         Individual under risk
     \item[Exposed $(E)$]
@@ -119,15 +120,21 @@ Thus we formulate the following Ordinary Differential Equation (ODE)
     \end{aligned}
 \end{equation}
 %
+    \begin{center}
+        \includegraphics[scale=0.25,
+        keepaspectratio]{Figures/no_contraled_dynamics}
+    \end{center}
+
      See \Cref{tbl:dynamics_base_parameters} for notation and references
      values.
+     \added[id=SDIV, comment={use WPS}]{Put here the flow diagram}
 \begin{table*}[h!]
 	\centering
 	\begin{tabular}{>{\centering}%
         p{0.2\textwidth}%
         p{0.4\textwidth}
     }
-		\toprule
+    \toprule
 		\textbf{Parameter} & \textbf{Description}
   	\\
   	\midrule
