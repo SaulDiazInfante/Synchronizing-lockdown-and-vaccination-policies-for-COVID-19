@@ -33,22 +33,17 @@ following [] we postulate priors for $p$ and $\kappa$
 \end{equation}
 %
 \textbf{}\comment[id=SDIV]{Review this $R_0$ calculation with Gabriel}
-Using the reproductive number definition of Van DenDrishe [CITE],
+Using the reproductive number definition
+of Van DenDrishe [CITE], 
+and defining $R_1 = \epsilon\theta- \theta +1$, 
+$R_2 = \mu + \delta_H+\gamma_S+\mu_{I_{s}}$
 we obtain
 \begin{equation*}
     \label{eqn:reproductive_number}
     R_0 :=
-    \frac{
-        N^{*}(
-        \beta_S p
-        \kappa +
-        \beta_A
-        \kappa(1-p) )
-    }{
-        (\mu - \kappa)
-        ( \gamma_S + \mu_{I_s} + \gamma_A + \mu)
-        N^* \mu
-    }.
+  \frac{\kappa}{\kappa+\mu}\left(\mu R_1+\delta_L\right)
+  \left[\frac{p\beta_S}{R_2}
+  +\frac{(1-p)\beta_A}{\gamma_A+\mu}\right].
 \end{equation*}
 
 \Cref{fig:data_CDMX_fitting} displays data of coumulative confirmed cases

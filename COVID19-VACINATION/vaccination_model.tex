@@ -30,17 +30,17 @@
     \label{eqn:vacination_dynamics}
     \begin{aligned}
         L' =&  \theta \mu N^{\star}
-                -(\epsilon \lambda + \delta_L + \mu) L
+                -(\epsilon \lambda + \delta_L + \lambda_V +\mu) L
         \\
         S' =&
-        	(1 - \theta) \mu N^\star
+            (1 - \theta) \mu N^\star
             + \delta_L L
             + \delta_V V
             + \delta_R R
-        	\\
+            \\
             &-
             \left(
-            	\lambda + \lambda_V + \mu
+                \lambda + \lambda_V + \mu
             \right) S
         \\
         E' =&
@@ -48,11 +48,11 @@
                 - (\kappa + \mu) E
         \\
         I_S' =&
-        	p \kappa E
+            p \kappa E
             -
             (
-            	\delta_H +
-            	\gamma_S +
+                \delta_H +
+                \gamma_S +
                 \mu_{I_S} +
                 \mu
             ) I_S
@@ -61,35 +61,35 @@
                 (1 - p) \kappa E - (\gamma_A + \mu) I_A
         \\
         H' = &
-        		\delta_H I_S - (\gamma_H + \mu_H + \mu) H
+            \delta_H I_S - (\gamma_H + \mu_H + \mu) H
         \\
         R' = &
-            	\gamma_S I_S +
-                \gamma_A I_A +
-                \gamma_H H
+            \gamma_S I_S +
+            \gamma_A I_A +
+            \gamma_H H
                 - (\delta_R + \mu) R
         \\
         D'  = &
                 \mu_{I_S} I_S + \mu_H H
         \\
         V' = &
-            \lambda_V  S
+            \lambda_V  (S + L)
             - \left[
-            	(1 - \varepsilon) \lambda
+                (1 - \varepsilon) \lambda
                 + \delta_V
                 + \mu
             \right ] V
         \\
         \\
             \frac{dX_{vac}}{dt}
-            	&=
-            	(u_V(t) + \lambda_V)
-            	\left[
-            		S + E + I_A + R
-            	\right]
+                &=
+                (u_V(t) + \lambda_V)
+                \left[
+                    L + S + E + I_A + R
+                \right]
         \\
             \frac{d Y_{I_S}}{dt}
-            	& = p \kappa E
+                & = p \kappa E
         \\
             \lambda &:=
                 \frac{\beta_A I_A + \beta_S I_S}{N^{\star}}
