@@ -11,13 +11,9 @@
 %
 
 \paragraph{Bayesian estimation}
-<<<<<<< HEAD
-We calibrate parameters of our base dynamics in
-\eqref{eqn:base_dynamics} via Multi-chain Montecarlo (MCMC).
-=======
-We calibrate parameters of our base dynamics 
+
+We calibrate parameters of our base dynamics
 \eqref{eqn:base_dynamics} via Multichain Montecarlo (MCMC).
->>>>>>> e757864a980cb63b6a2949cc35024a21ea6ca658
 To this end, we assume that the cumulative
 incidence of new infected symptomatic cases $CI_S$
 follows a Poisson distribution with mean $\lambda_t = IC_s(t)$. Further,
@@ -37,17 +33,29 @@ following [] we postulate priors for $p$ and $\kappa$
     \end{aligned}
 \end{equation}
 %
-\textbf{}\comment[id=SDIV]{Review this $R_0$ calculation with Gabriel}
+\comment[id=SDIV]{Review this $R_0$ calculation with Gabriel}
 Using Van DenDrishe's [CITE] definition of reproductive number
-and defining $R_1 = \epsilon\theta- \theta +1$,
-$R_2 = \mu + \delta_H+\gamma_S+\mu_{I_{s}}$
 we obtain
 \begin{equation*}
     \label{eqn:reproductive_number}
-    R_0 :=
-  \frac{\kappa}{(\kappa+\mu)(\delta_L+\mu)}\left(\mu R_1+\delta_L\right)
-  \left[\frac{p\beta_S}{R_2}
-  +\frac{(1-p)\beta_A}{\gamma_A+\mu}\right].
+    \begin{aligned}
+        R_0 :=
+        &
+        \frac{\kappa}{(\kappa + \mu)(\delta_L + \mu)}
+        \left(
+            \mu R_1 + \delta_L
+        \right)
+        \left[
+            \frac{p\beta_S}{R_2}
+            +\frac{(1 - p) \beta_A}{\gamma_A+\mu}
+        \right],
+    \\
+    \text{where} &
+    \\
+        R_1 &= 1 - \theta(1 - \epsilon),
+    \\
+        R_2 &= \mu + \delta_H + \gamma_S + \mu_{I_{S}}
+    \end{aligned}
 \end{equation*}
 
 \Cref{fig:data_CDMX} displays data of cumulative confirmed cases
@@ -121,7 +129,7 @@ setting.
         \\
             $\mu_{H}$
             & \num{0.01632}
-            & [FENG]
+            & \cite{Zhao2020}
         \\
             $\gamma_S$
             & \num{0.09250694}

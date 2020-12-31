@@ -1,5 +1,5 @@
-%\documentclass[5p, sort&compress]{elsarticle}
-\documentclass[sort&compress, review]{elsarticle}
+\documentclass[3p, sort&compress]{elsarticle}
+%\documentclass[sort&compress, preprint]{elsarticle}
 %\documentclass{cas-sc}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -22,9 +22,9 @@
 \linenumbers
 \newdefinition{hypotheses}{Hypothesis}
 \newdefinition{assumptions}{Assumptions}
-%\input{frontmatter}
 \begin{document}
-     \section{Introduction}
+    \input{frontmatter}
+    \section{Introduction}
         \input{introduction}
     \section{Covid-19 spread dynamics}
         \input{model_formulation}
@@ -39,12 +39,12 @@
     \section{Numerical Experiments}
         \input{DifferentiaEvolution}
         \input{simulation}
-
+    \section{Conclusion}
     \listofchanges[style=compactsummary]
     \appendix
-  \section{Existence of optimal policies}
-    \input{appendix}
-  \bibliography{NovelCovid19.bib}
-  %\bibliographystyle{plain}
-  \bibliographystyle{elsarticle-num}
-  \end{document}
+    \section{Existence of optimal policies}
+        \input{appendix}
+        \bibliography{NovelCovid19.bib}
+        %\bibliographystyle{plain}
+    \bibliographystyle{elsarticle-num}
+\end{document}
