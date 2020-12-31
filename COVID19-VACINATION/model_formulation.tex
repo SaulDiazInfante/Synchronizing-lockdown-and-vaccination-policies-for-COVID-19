@@ -1,15 +1,14 @@
 %!TEX root = main.tex
 \paragraph{Uncontrolled dynamics}
-    We split a given population of size $N$ in the base\textcolor{blue}{/basic?} SEIR
-structure with \textcolor{red}{segregation infected} \textcolor{blue}{segregated} classes according to the manifestation
+    We split a given population of size $N$ in the basic SEIR
+structure with segregated classes according to the manifestation
 of symptoms. Let $L, S, E, I_S, I_A, H, R, D$ respectively denote the
-class of \textcolor{red}{an individual} \textcolor{blue}{individuals} according to \textcolor{red}{its} \textcolor{blue}{their} current state, namely
+class of individuals according to their current state, namely
 %
 \begin{description}
     \item[Lockdown $(L)$]
-        All individuals that \textcolor{red}{has} \textcolor{blue}{have} low or null mobility and \textcolor{red}{that remains} \textcolor{blue}{remain} under
-        isolation. Thus individuals in this class reduce their \textcolor{red}{probability of
-        contagious} \textcolor{blue}{contagion probability}.
+        All individuals that have low or null mobility and remain under
+        isolation. Thus individuals in this class reduce their contagion probability.
     \item[Suceptible $(S)$]
         Individuals under risk
     \item[Exposed $(E)$]
@@ -24,25 +23,25 @@ class of \textcolor{red}{an individual} \textcolor{blue}{individuals} according 
     \item[Recover or removed $(R)$]
         Population that recovers from infection and develops partial immunity
     \item[Death $(D)$]
-        Population fraction that \textcolor{red}{death by} \textcolor{blue}{died from/due to} COVID-19
+        Population fraction that died due to COVID-19
 \end{description}
 %
 To fit data of cumulative reported symptomatic cases, we
-postulate the counter state $Y_{I_S}$ and make the following hypothesis\textcolor{blue}{/assumptions?}.
+postulate the counter state $Y_{I_S}$ and make the following assumptions.
 %
 %
-\begin{hypotheses}
+\begin{assumptions}
     According to above compartment description, we made the following
-    hypothesis\textcolor{blue}{/hypotheses}.
-    \begin{enumerate}[(H-1)]
+    hypotheses.
+    \begin{enumerate}[({A}-1)]
         \item
-            We suppose that at least \SI{30}\percent  \  of the population is
-            \textcolor{red}{under lock-down} \textcolor{blue}{locked down} and a fraction of this class eventually moves
+            We suppose that at least \SI{30}{\percent} of the population is
+            locked down and a fraction of this class eventually moves
             to the susceptible compartment at rate $\delta_L$.
         \item
             Force infection is defined as the probability of acquiring COVID-19
             given the contact with a symptomatic or asymptomatic individual.
-            Thus we normalize \textcolor{red}{under  live} \textcolor{blue}{with respect to alive population} population
+            Thus we normalize with respect to alive population population
             $
                 N^{\star}
             $.
@@ -54,26 +53,21 @@ postulate the counter state $Y_{I_S}$ and make the following hypothesis\textcolo
             when they are in contact with asymptomatic or symptomatic
             individuals. Thus $\beta_S$ and $\beta_A$ denote the
             probabilities of being infectious given the contact with a symptomatic or
-            asymptomatic infectious individuals,  \textcolor{blue}{respectively}.
+            asymptomatic infectious individuals, respectively.
         \item
             After a period of latency  $1/\kappa = \SI{5.1}{days}$, an
             exposed individual becomes infected. Being $p$ the probability of
             developing symptoms and $(1-p)$ the probability of becoming infectious
             but asymptomatic. Thus $p\kappa E$ denotes the
-            \textcolor{red}{event of becoming infectious and develop symptoms given that the
-            individual has been exposed} \textcolor{blue}{exposed individuals that become infectious and develop symptoms}. 
+            exposed individuals that become infectious and develop symptoms. 
         \item
-            Asymptomatic individuals \textcolor{blue}{do} not die or stay in the Hospital.
+            Asymptomatic individuals do not die or stay in the Hospital.
         \item
             A fraction $\mu_{H}$ of symptomatic individuals
             dies due to COVID-19 without hospitalization.
         %\item
     \end{enumerate}
-\end{hypotheses}
-%\paragraph{Hypothesis}
-
-
-
+\end{assumptions}
 
 Thus we formulate the following Ordinary Differential Equation (ODE)
 \begin{equation}
