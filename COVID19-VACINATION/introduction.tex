@@ -5,12 +5,11 @@
     Comment about the solution of the underlying Optimal Control Problem
     \comment[id=SDIV]{David}
     
-One of the main features of our model is that we consider piecewise constant control policies instead of general measurable control policies. General control policies are difficult to implement since the authority has to make different choices every instant. The optimal policies we find are constant in each interval of time and hence these policies are easier to implement. 
+One of the main features of our model is that we consider piecewise constant control policies instead of general measurable control policies (also called permanent controls) to minimize a cost functional. General control policies are difficult to implement since the authority has to make different choices every permanently. The optimal policies we find are constant in each interval of time and hence these policies are easier to implement. 
 
-Optimal control problems with piecewise constant policies have been widely studied:  solution method \cite{MR3228405}, convergence \cite{MR3627992}.
+Optimal control problems with piecewise constant policies have been studied in different contexts. For instance, a solution method based on the gradient of the cost functional is studied in \cite{MR3223602}; convergence results of  piecewise constant solutions to permanent solutions in linear-quadratic problems are given in \cite{MR3627992}; or, in \cite{CANTUNetAl}, a general numerical methodology to find piecewise constant solutions is proposed. 
 
-However, to the best of our knowledge, this is the first application of such policies in epidemics control. 
-     
+
 \paragraph{Vaccine development}
 \paragraph{Problem setup}
 \paragraph{Litterature review}

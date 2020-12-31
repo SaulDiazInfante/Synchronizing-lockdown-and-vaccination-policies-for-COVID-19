@@ -14,6 +14,10 @@
 \usepackage[nameinlink,noabbrev]{cleveref}
 \usepackage[draft]{changes}
 \usepackage[section]{placeins}
+
+\usepackage[]{algorithm,algcompatible,lipsum}
+\usepackage[]{algpseudocode}
+
 \modulolinenumbers[1]
 \definechangesauthor[color=orange]{SDIV}
 \linenumbers
@@ -42,5 +46,7 @@
   \section{Existence of optimal policies}
     \input{appendix}
   \bibliography{NovelCovid19.bib}
-  \bibliographystyle{plain}
+  %\bibliographystyle{plain}
+  \bibliographystyle{elsarticle-num}
+  
 \end{document}
