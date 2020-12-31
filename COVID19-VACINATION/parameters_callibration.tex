@@ -3,7 +3,7 @@
     \centering
     \includegraphics[scale=0.7, keepaspectratio]{./cdmx_CIs_data_begining_fit}
     \caption{%
-        Fit of diary new cases of Mexico city
+        Fit of daily new cases of Mexico city
         during exponential growth.
     }
     \label{fig:data_CDMX_fitting}
@@ -11,8 +11,13 @@
 %
 
 \paragraph{Bayesian estimation}
+<<<<<<< HEAD
 We calibrate parameters of our base dynamics in
 \eqref{eqn:base_dynamics} via Multi-chain Montecarlo (MCMC).
+=======
+We calibrate parameters of our base dynamics 
+\eqref{eqn:base_dynamics} via Multichain Montecarlo (MCMC).
+>>>>>>> e757864a980cb63b6a2949cc35024a21ea6ca658
 To this end, we assume that the cumulative
 incidence of new infected symptomatic cases $CI_S$
 follows a Poisson distribution with mean $\lambda_t = IC_s(t)$. Further,
@@ -33,8 +38,7 @@ following [] we postulate priors for $p$ and $\kappa$
 \end{equation}
 %
 \textbf{}\comment[id=SDIV]{Review this $R_0$ calculation with Gabriel}
-Using the reproductive number definition
-of Van DenDrishe [CITE],
+Using Van DenDrishe's [CITE] definition of reproductive number
 and defining $R_1 = \epsilon\theta- \theta +1$,
 $R_2 = \mu + \delta_H+\gamma_S+\mu_{I_{s}}$
 we obtain
@@ -46,10 +50,10 @@ we obtain
   +\frac{(1-p)\beta_A}{\gamma_A+\mu}\right].
 \end{equation*}
 
-\Cref{fig:data_CDMX_fitting} displays data of coumulative confirmed cases
-of COVID-19 of Mexico city, and \Cref{fig:data_CDMX_fitting} displays the fitt
+\Cref{fig:data_CDMX} displays data of cumulative confirmed cases
+of COVID-19 in Mexico city, and \Cref{fig:data_CDMX_fitting} displays the fitted curve
 of our model in \Cref{eqn:base_dynamics,eqn:boservation_model}.
-\Cref{tbl:parameters_values} enclose fixed and estimated parameters to this
+\Cref{tbl:parameters_values} encloses estimated parameters to this
 setting.
 
   \begin{table*}

@@ -6,13 +6,13 @@
 \paragraph{Vaccination rate $\lambda_V$ estimate}
 \paragraph{Feasibility regions according to efficacy and vaccination rate}
 %
-\begin{hypotheses}
+\begin{assumptions}
      According to COVID-19 dynamics in model in \Cref{eqn:base_dynamics}, we
      made the following modeling hypotheses about the regarding vaccine.
      \begin{enumerate}[(VH-1)]
         \item
             Vaccine is preventive and only reduce susceptibility.
-            Justify this hypothesis cite{}
+            \comment[id=SDIV]{Justify this hypothesis cite}
         \item
             The vaccination camping omits testing to detect seroprevalence.
             Thus Expoxed, Infected Asymptomatics and Recovered Asymptomatic
@@ -21,9 +21,13 @@
         \item
             Individuals under Lockdown also would be vaccinated
         \item
-            The vaccine is leaky and with efficacy $\epsilon \in[0.6, .975]$
+            The vaccine is leaky and with efficacy $\epsilon \in[0.7, .975]$
+        \item   
+            Vaccine induced immunity last \SI{2}{years}
+        \item   
+            Natural immunity last a period of \SI{180}{days} 
      \end{enumerate}
-\end{hypotheses}
+\end{assumptions}
 
 
 \begin{equation}

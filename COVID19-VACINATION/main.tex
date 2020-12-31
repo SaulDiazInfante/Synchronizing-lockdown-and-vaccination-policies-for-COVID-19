@@ -1,5 +1,5 @@
 %\documentclass[5p, sort&compress]{elsarticle}
-\documentclass[sort&compress]{elsarticle}
+\documentclass[sort&compress, review]{elsarticle}
 %\documentclass{cas-sc}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -14,14 +14,17 @@
 \usepackage[nameinlink,noabbrev]{cleveref}
 \usepackage[draft]{changes}
 \usepackage[section]{placeins}
+\usepackage[]{algorithm,algcompatible,lipsum}
+\usepackage[]{algpseudocode}
+
 \modulolinenumbers[1]
 \definechangesauthor[color=orange]{SDIV}
 \linenumbers
 \newdefinition{hypotheses}{Hypothesis}
 \newdefinition{assumptions}{Assumptions}
+%\input{frontmatter}
 \begin{document}
-    %\input{frontmatter}
-    \section{Introduction}
+     \section{Introduction}
         \input{introduction}
     \section{Covid-19 spread dynamics}
         \input{model_formulation}
@@ -42,5 +45,6 @@
   \section{Existence of optimal policies}
     \input{appendix}
   \bibliography{NovelCovid19.bib}
-  \bibliographystyle{plain}
-\end{document}
+  %\bibliographystyle{plain}
+  \bibliographystyle{elsarticle-num}
+  \end{document}

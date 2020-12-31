@@ -1,79 +1,73 @@
 %!TEX root = main.tex
 \paragraph{Uncontrolled dynamics}
-    We split a given population of size $N$ in the base SEIR
-structure with segregation infected classes according to the manifestation
+    We split a given population of size $N$ in the basic SEIR
+structure with segregated classes according to the manifestation
 of symptoms. Let $L, S, E, I_S, I_A, H, R, D$ respectively denote the
-class of an individual according to its current state, namely
+class of individuals according to their current state, namely
 %
 \begin{description}
     \item[Lockdown $(L)$]
-        All individuals that has low or null mobility and that remains under
-        isolation. Thus individual in this class reduce its probability of
-        contagious.
+        All individuals that have low or null mobility and remain under
+        isolation. Thus individuals in this class reduce their contagion probability.
     \item[Suceptible $(S)$]
-        Individual under risk
+        Individuals under risk
     \item[Exposed $(E)$]
-        Population fraction that host SARS-CoV-2 but cannot infect
+        Population fraction that hosts SARS-CoV-2 but cannot infect
     \item[Infected-Symptomatic $(I_S)$]
         Population infected fraction with symptoms and reported as confirmed
-        case
+        cases
     \item[Infected-Asymptomatic $(I_A)$]
-        Infected individual whit transitory or null symptoms and unreported
+        Infected individuals with transitory or null symptoms and unreported
     \item[Hospitalized $(H)$]
         Infected population that requires hospitalization or intensive care.
     \item[Recover or removed $(R)$]
         Population that recovers from infection and develops partial immunity
     \item[Death $(D)$]
-        Population fraction that death by COVID-19
+        Population fraction that died due to COVID-19
 \end{description}
 %
 To fit data of cumulative reported symptomatic cases, we
-postulated the counter state $Y_{I_S}$ and made the following hypothesis.
+postulate the counter state $Y_{I_S}$ and make the following assumptions.
 %
 %
-\begin{hypotheses}
+\begin{assumptions}
     According to above compartment description, we made the following
-    hypothesis.
-    \begin{enumerate}[(H-1)]
+    hypotheses.
+    \begin{enumerate}[({A}-1)]
         \item
-            We suppose that at least \SI{30}\percent  of the population is
-            under lock-down and that eventually a fraction of this class move
+            We suppose that at least \SI{30}{\percent} of the population is
+            locked down and a fraction of this class eventually moves
             to the susceptible compartment at rate $\delta_L$.
         \item
-            Force infection is defined as the probablity of acquire COVID-19
-            given the contact with a symptomatic or asympotomatic individual.
-            Thus we normalize under live population
+            Force infection is defined as the probability of acquiring COVID-19
+            given the contact with a symptomatic or asymptomatic individual.
+            Thus we normalize with respect to alive population population
             $
                 N^{\star}
-            $
+            $.
         \item
             Susceptible individuals become
             exposed\textemdash but not infectious\textemdash
             % exposed individuals
             %host the virus but can not transmit it.
             when they are in contact with asymptomatic or symptomatic
-            individuals. Thus $\beta_S$, $\beta_A$ denote
-            probability of infectious given the contact with a symptomatic or
-            asymptomatic infectious individuals.
+            individuals. Thus $\beta_S$ and $\beta_A$ denote the
+            probabilities of being infectious given the contact with a symptomatic or
+            asymptomatic infectious individuals, respectively.
         \item
-            After a period of latency of $1/\kappa = \SI{5.1}{days}$, an
-            exposed individual became infected. Being $p$ the probability of
-            develop symptoms and $(1-p)$ the probability of became infectious
+            After a period of latency  $1/\kappa = \SI{5.1}{days}$, an
+            exposed individual becomes infected. Being $p$ the probability of
+            developing symptoms and $(1-p)$ the probability of becoming infectious
             but asymptomatic. Thus $p\kappa E$ denotes the
-            event of become infectious and develop symptoms given that the
-            individual has been exposed
+            exposed individuals that become infectious and develop symptoms. 
         \item
-            Asymptomatic individuals not die or get in a Hospital
+            Asymptomatic individuals do not die or stay in the Hospital.
         \item
             A fraction $\mu_{H}$ of symptomatic individuals
-            die by COVID-19 without hospitalization
+            dies due to COVID-19 without hospitalization.
         %\item
     \end{enumerate}
-\end{hypotheses}
-%\paragraph{Hypothesis}
-
-
-
+\end{assumptions}
 
 Thus we formulate the following Ordinary Differential Equation (ODE)
 \begin{equation}
