@@ -1,0 +1,90 @@
+\documentclass[10pt ,stdletter, dateno, sigleft]{newlfm}
+\usepackage{charter}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+\newsavebox{\Luiuc}
+%\sbox{\Luiuc}{
+%	\parbox[b]{1.75in}{\vspace{0.5in}
+%	\includegraphics[scale=.1,keepaspectratio]{logo.png}}
+%}
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+%
+\newlfmP{sigsize=50pt} 
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone} 
+\PhrEmail{Email} 
+\lthUiuc
+%------------------------------------------------------------------------------
+%
+%	YOUR NAME AND CONTACT INFORMATION
+%------------------------------------------------------------------------------
+\namefrom{Sa\'ul D\'iaz-Infante Velasco, PhD} % Name
+\addrfrom{
+    December 31, 2020\\[12pt]
+    \\
+    Sa\'ul D\'iaz-Infante Velasco, PhD
+    \\
+    CONACYT-Universidad de Sonora,
+    \\
+    Department of Mathematics, 
+    \\
+    Graduate division
+    \\
+    Blvd Luis Encinas y Rosales S/N,
+    \\
+    Hermosillo, Sonora C.P. 8300,
+}
+\phonefrom{+52(662) 2592219 ext. 2430} 
+\emailfrom{saul.diazinfante@unison.mx}
+%
+%------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%------------------------------------------------------------------------------
+%
+\greetto{Dear Professor ,} % Greeting text
+\closeline{Sincerely yours,} % Closing text
+\nameto{Esteban A. Hernandez-Vargas } % Addressee of the letter above the to address
+\addrto{
+    Guess Editor, Annual Reviews in Control\\
+    Special Issue: Systems \& Control Research\\
+    Efforts Against COVID-19 and Future Pandemics
+    \\
+    Instituto de Matemáticas,\\
+    Universidad Autonoma de M\'exico\\
+    Sede:Juriquilla
+    }
+%------------------------------------------------------------------------------
+\begin{document}
+    \begin{newlfm}
+             We are pleased to submit an original research article entitled
+        ``Optimal constant piecewise vaccination and lockdown
+        policies for COVID-19,''  by Gabriel A. Salcedo-Varela, Francisco Pe\~nu\~nuri, David Gonz\'alez-S\'anchez, and Saul Diaz-Infante, to be considered for publication in the Special Issue: 
+        ``Special Issue: Systems \& Control Research Efforts Against COVID-19 and Future Pandemics'' Annual Reviews in Control.
+
+            In this article, we model COVID-19 lockdown and vaccination 
+            policies as an  optimal control problem. We explore by numerical 
+            simulation scenarios regarding actual vaccines' developments. 
+
+        Our results face some of the prioritized infectious disease modeling 
+        questions established by the WHO-SAGE group on immunization. We assess 
+        vaccination campings configurations' responses as covering and time 
+        horizon and its implications on the COVID19 burden. We explore via 
+        simulation responses on the prevalence mitigation of symptomatic cases 
+        and saved lives conforming to vaccine efficacy. Further, our numerical 
+        experiments investigate the plausible but not yet confirmed 
+        reinfection scenario according to different natural immunity periods parallel with the lockdown strategy.  
+        
+            Our manuscript has not been published and is not under 
+        consideration for publication elsewhere. We have no conflicts of interest to disclose.
+        We also confirm that the co-authors have agreed to the present 
+        submitted version.
+        \\[0.5cm]
+    %--------------------------------------------------------------------------
+\end{newlfm}
+\end{document}

@@ -1,0 +1,9 @@
+Modeling vaccination and lockdown in COVID-19 as an optimal control problem
+
+Quantifying desease damages by means of DALYs 
+
+Optimal policies in COVID-19 pandemic considering lockdown costs 
+
+Solving optimal applied control problems by using Differential Evolution
+
+Piecewise optimal policies in optimal control problems
