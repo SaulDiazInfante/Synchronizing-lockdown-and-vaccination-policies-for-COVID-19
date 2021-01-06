@@ -44,45 +44,51 @@ ptr=1, stack=
 while executing---line 1499 of file elsarticle-num.bst
 Warning--empty journal in Ferguson2020
 Warning--there's a number but no volume in Ferguson2020
-You've used 21 entries,
+You can't pop an empty literal stack for entry gitHub_b
+while executing---line 1499 of file elsarticle-num.bst
+ptr=1, stack=
+ (2020)
+---the literal stack isn't empty for entry gitHub_b
+while executing---line 1499 of file elsarticle-num.bst
+You've used 28 entries,
             2959 wiz_defined-function locations,
-            834 strings with 11237 characters,
-and the built_in function-call counts, 7498 in all, are:
-= -- 723
-> -- 312
+            892 strings with 12966 characters,
+and the built_in function-call counts, 10025 in all, are:
+= -- 992
+> -- 391
 < -- 0
-+ -- 118
-- -- 97
-* -- 641
-:= -- 1112
-add.period$ -- 35
-call.type$ -- 21
-change.case$ -- 23
++ -- 149
+- -- 121
+* -- 858
+:= -- 1467
+add.period$ -- 48
+call.type$ -- 28
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 219
-empty$ -- 803
-format.name$ -- 110
-if$ -- 1898
+cite$ -- 32
+duplicate$ -- 294
+empty$ -- 1076
+format.name$ -- 141
+if$ -- 2545
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 16
-newline$ -- 98
-num.names$ -- 21
-pop$ -- 138
+int.to.str$ -- 28
+missing$ -- 22
+newline$ -- 128
+num.names$ -- 28
+pop$ -- 175
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 395
+skip$ -- 533
 stack$ -- 0
-substring$ -- 298
-swap$ -- 79
+substring$ -- 436
+swap$ -- 108
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 36
-width$ -- 23
-write$ -- 231
-(There were 12 error messages)
+while$ -- 52
+width$ -- 30
+write$ -- 308
+(There were 14 error messages)

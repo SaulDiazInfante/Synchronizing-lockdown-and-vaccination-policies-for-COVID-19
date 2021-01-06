@@ -165,6 +165,60 @@ M.~E. Alexander, C.~Bowman, S.~M. Moghadas, R.~Summers, A.~B. Gumel, B.~M.
 \newblock \href {https://doi.org/10.1137/030600370}
   {\path{doi:10.1137/030600370}}.
 
+\bibitem{MR3223602}
+K.~R. Aida-zade, Y.~R. Ashrafova,
+  \href{https://doi.org/10.1080/02331934.2012.711831}{Optimal control of
+  sources on some classes of functions}, Optimization 63~(7) (2014) 1135--1152
+  (2014).
+\newblock \href {https://doi.org/10.1080/02331934.2012.711831}
+  {\path{doi:10.1080/02331934.2012.711831}}.
+\newline\urlprefix\url{https://doi.org/10.1080/02331934.2012.711831}
+
+\bibitem{MR3627992}
+L.~Bourdin, E.~Tr\'{e}lat,
+  \href{https://doi.org/10.1016/j.automatica.2017.02.013}{Linear-quadratic
+  optimal sampled-data control problems: convergence result and {R}iccati
+  theory}, Automatica J. IFAC 79 (2017) 273--281 (2017).
+\newblock \href {https://doi.org/10.1016/j.automatica.2017.02.013}
+  {\path{doi:10.1016/j.automatica.2017.02.013}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.automatica.2017.02.013}
+
+\bibitem{CANTUNetAl}
+K.~Cantún-Avila, D.~González-Sánchez, S.~Díaz-Infante, F.~Peñuñuri,
+  Optimizing functionals using differential evolution, Engineering Applications
+  of Artificial Intelligence 97 (2021) 104086 (2021).
+\newblock \href
+  {https://doi.org/https://doi.org/10.1016/j.engappai.2020.104086}
+  {\path{doi:https://doi.org/10.1016/j.engappai.2020.104086}}.
+
+\bibitem{Storn1997}
+R.~Storn, K.~Price, Differential evolution -- a simple and efficient heuristic
+  for global optimization over continuous spaces, Journal of Global
+  Optimization 11~(4) (1997) 341--352 (1997).
+\newblock \href {https://doi.org/https://doi.org/10.1023/A:1008202821328}
+  {\path{doi:https://doi.org/10.1023/A:1008202821328}}.
+
+\bibitem{Bilal2020}
+Bilal, M.~Pant, H.~Zaheer, L.~Garcia-Hernandez, A.~Abraham, Differential
+  evolution: A review of more than two decades of research, Engineering
+  Applications of Artificial Intelligence 90 (2020) 103479 (2020).
+\newblock \href
+  {https://doi.org/https://doi.org/10.1016/j.engappai.2020.103479}
+  {\path{doi:https://doi.org/10.1016/j.engappai.2020.103479}}.
+
+\bibitem{Penunuri2016}
+F.~{Pe\~nu\~nuri}, C.~Cab, O.~Carvente, M.~Zambrano-Arjona, J.~Tapia, A study
+  of the classical differential evolution control parameters, Swarm and
+  Evolutionary Computation 26 (2016) 86 -- 96 (2016).
+\newblock \href {https://doi.org/https://doi.org/10.1016/j.swevo.2015.08.003}
+  {\path{doi:https://doi.org/10.1016/j.swevo.2015.08.003}}.
+
+\bibitem{gitHub_b}
+S.~Diaz-Infante, F.~Peñuñuri, D.~Gonzalez-Sanchez, G.~Salcedo-Varela,
+  \href{https://github.com/SaulDiazInfante/NovelCovid19-OptimalPiecewiseControlModelling.git}{{Source
+  code for the manuscript Optimal Vaccine Policies for COVID-19}} (2020).
+\newline\urlprefix\url{https://github.com/SaulDiazInfante/NovelCovid19-OptimalPiecewiseControlModelling.git}
+
 \bibitem{Kong2014}
 Q.~Kong, \href{https://doi.org/10.1007/978-3-319-11239-8}{A short course in
   ordinary differential equations}, Universitext, Springer, Cham, 2014 (2014).

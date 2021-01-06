@@ -635,17 +635,6 @@ All analysis code and data are available at https://github.com/cmmid/covid-uk.
   publisher = {Korean Academy of Medical Sciences},
 }
 
-@Article{Chatzilena2019a,
-  author    = {Chatzilena, Anastasia and van Leeuwen, Edwin and Ratmann, Oliver and Baguelin, Marc and Demiris, Nikolaos},
-  title     = {Contemporary statistical inference for infectious disease models using Stan},
-  journal   = {Epidemics},
-  year      = {2019},
-  volume    = {29},
-  pages     = {10036(1-16)},
-  doi       = {10.1016/j.epidem.2019.100367},
-  publisher = {Elsevier},
-}
-
 @Article{Guner2020,
   author    = {G\"{u}ner, Rahmet and Hasano\u{g}lu, \.{I}mran and Akta\c{s}, Firdevs},
   title     = {COVID-19: Prevention and control measures in community},
@@ -1119,38 +1108,22 @@ Contact matrices, demographic data and model parameters are available via the ci
   url       = {https://linkinghub.elsevier.com/retrieve/pii/S0025556420301450},
 }
 
-@Article{Ullah2020a,
-  author    = {Ullah, Saif and Khan, Muhammad Altaf},
-  title     = {{Modeling the impact of non-pharmaceutical interventions on the dynamics of novel coronavirus with optimal control analysis with a case study}},
-  journal   = {Chaos, Solitons {\&} Fractals},
-  year      = {2020},
-  volume    = {139},
-  pages     = {110075},
-  month     = {oct},
-  issn      = {09600779},
-  abstract  = {Coronavirus disease (COVID-19) is the biggest public health challenge the world is facing in recent days. Since there is no effective vaccine and treatment for this virus, therefore, the only way to mitigate this infection is the implementation of non-pharmaceutical interventions such as social-distancing, community lockdown, quarantine, hospitalization or self-isolation and contact-tracing. In this paper, we develop a mathematical model to explore the transmission dynamics and possible control of the COVID-19 pandemic in Pakistan, one of the Asian countries with a high burden of disease with more than 200,000 confirmed infected cases so far. Initially, a mathematical model without optimal control is formulated and some of the basic necessary analysis of the model, including stability results of the disease-free equilibrium is presented. It is found that the model is stable around the disease-free equilibrium both locally and globally when the basic reproduction number is less than unity. Despite the basic analysis of the model, we further consider the confirmed infected COVID-19 cases documented in Pakistan from March 1, till May 28, 2020 and estimate the model parameters using the least square fitting tools from statistics and probability theory. The results show that the model output is in good agreement with the reported COVID-19 infected cases. The approximate value of the basic reproductive number based on the estimated parameters is R0≈1.87. The effect of low (or mild), moderate, and comparatively strict control interventions like social-distancing, quarantine rate, (or contact-tracing of suspected people) and hospitalization (or self-isolation) of testing positive COVID-19 cases are shown graphically. It is observed that the most effective strategy to minimize the disease burden is the implementation of maintaining a strict social-distancing and contact-tracing to quarantine the exposed people. Furthermore, we carried out the global sensitivity analysis of the most crucial parameter known as the basic reproduction number using the Latin Hypercube Sampling (LHS) and the partial rank correlation coefficient (PRCC) techniques. The proposed model is then reformulated by adding the time-dependent control variables u1(t) for quarantine and u2(t) for the hospitalization interventions and present the necessary optimality conditions using the optimal control theory and Pontryagin's maximum principle. Finally, the impact of constant and optimal control interventions on infected individuals is compared graphically.},
-  doi       = {10.1016/j.chaos.2020.110075},
-  file      = {:home/saul/Documents/Mendeley Desktop/Ullah, Khan/Chaos, Solitons and Fractals/Ullah, Khan - 2020 - Modeling the impact of non-pharmaceutical interventions on the dynamics of novel coronavirus with optimal control a.pdf:pdf},
-  keywords  = {Global sensitivity analysis,Hospitalization/self-isolation,Novel coronavirus,Numerical results,Optimal control theory,Parameter estimation,Quarantine},
-  publisher = {Elsevier Ltd},
-  url       = {https://linkinghub.elsevier.com/retrieve/pii/S0960077920304720},
-}
-
-@Article{Mandal2020a,
-  author    = {Mandal, Manotosh and Jana, Soovoojeet and Nandi, Swapan Kumar and Khatua, Anupam and Adak, Sayani and Kar, T.K.},
-  title     = {{A model based study on the dynamics of COVID-19: Prediction and control}},
-  journal   = {Chaos, Solitons {\&} Fractals},
-  year      = {2020},
-  volume    = {136},
-  pages     = {109889},
-  month     = {jul},
-  issn      = {09600779},
-  abstract  = {As there is no vaccination and proper medicine for treatment, the recent pandemic caused by COVID-19 has drawn attention to the strategies of quarantine and other governmental measures, like lockdown, media coverage on social isolation, and improvement of public hygiene, etc to control the disease. The mathematical model can help when these intervention measures are the best strategies for disease control as well as how they might affect the disease dynamics. Motivated by this, in this article, we have formulated a mathematical model introducing a quarantine class and governmental intervention measures to mitigate disease transmission. We study a thorough dynamical behavior of the model in terms of the basic reproduction number. Further, we perform the sensitivity analysis of the essential reproduction number and found that reducing the contact of exposed and susceptible humans is the most critical factor in achieving disease control. To lessen the infected individuals as well as to minimize the cost of implementing government control measures, we formulate an optimal control problem, and optimal control is determined. Finally, we forecast a short-term trend of COVID-19 for the three highly affected states, Maharashtra, Delhi, and Tamil Nadu, in India, and it suggests that the first two states need further monitoring of control measures to reduce the contact of exposed and susceptible humans.},
-  doi       = {10.1016/j.chaos.2020.109889},
-  file      = {:home/saul/Documents/Mendeley Desktop/Mandal et al/Chaos, Solitons {\&} Fractals/Mandal et al. - 2020 - A model based study on the dynamics of COVID-19 Prediction and control.pdf:pdf},
-  keywords  = {Bang-bang and singular control,Basic reproduction number,Short term prediction of COVID-19,Theoretical epidemiology,Transcritical bifurcation,basic reproduction number,theoretical epidemiology,transcritical bifurcation},
-  publisher = {Elsevier Ltd},
-  url       = {https://doi.org/10.1016/j.chaos.2020.109889 https://linkinghub.elsevier.com/retrieve/pii/S0960077920302897},
+@article{VandenDriessche2017a,
+abstract = {This primer article focuses on the basic reproduction number, ℛ0, for infectious diseases, and other reproduction numbers related to ℛ0 that are useful in guiding control strategies. Beginning with a simple population model, the concept is developed for a threshold value of ℛ0 determining whether or not the disease dies out. The next generation matrix method of calculating ℛ0 in a compartmental model is described and illustrated. To address control strategies, type and target reproduction numbers are defined, as well as sensitivity and elasticity indices. These theoretical ideas are then applied to models that are formulated for West Nile virus in birds (a vector-borne disease), cholera in humans (a disease with two transmission pathways), anthrax in animals (a disease that can be spread by dead carcasses and spores), and Zika in humans (spread by mosquitoes and sexual contacts). Some parameter values from literature data are used to illustrate the results. Finally, references for other ways to calculate ℛ0 are given. These are useful for more complicated models that, for example, take account of variations in environmental fluctuation or stochasticity.},
+author = {van den Driessche, Pauline},
+doi = {10.1016/j.idm.2017.06.002},
+file = {:C$\backslash$:/Users/adria/AppData/Local/Temp/1-s2.0-S2468042717300209-main.pdf:pdf},
+issn = {24680427},
+journal = {Infectious Disease Modelling},
+keywords = {Anthrax,Basic reproduction number,Cholera,Disease control,West Nile virus,Zika virus},
+month = {aug},
+number = {3},
+pages = {288--303},
+publisher = {Elsevier Ltd},
+title = {{Reproduction numbers of infectious disease models}},
+url = {http://dx.doi.org/10.1016/j.idm.2017.06.002 https://linkinghub.elsevier.com/retrieve/pii/S2468042717300209},
+volume = {2},
+year = {2017}
 }
 
 @Article{Weitz2020,
@@ -1173,21 +1146,6 @@ Contact matrices, demographic data and model parameters are available via the ci
   url       = {https://doi.org/10.1038/s41591-020-0895-3},
 }
 
-@Article{Libotte2020a,
-  author        = {Libotte, Gustavo Barbosa and Lobato, Fran S{\'{e}}rgio and Platt, Gustavo Mendes and Neto, Ant{\^{o}}nio Jos{\'{e}} da Silva},
-  title         = {{Determination of an Optimal Control Strategy for Vaccine Administration in COVID-19 Pandemic Treatment}},
-  year          = {2020},
-  number        = {November 2019},
-  month         = {apr},
-  abstract      = {During decades, mathematical models have been used to predict the behavior of physical and biologic systems, and to define strategies aiming the minimization of the effects regarding different types of diseases. In the present days, the development of mathematical models to simulate the dynamic behavior of novel coronavirus disease (COVID-19) is considered an important theme due to the quantity of infected people worldwide. In this work, the aim is to determine an optimal control strategy for vaccine administration in COVID-19 pandemic treatment considering real data from China. For this purpose, an inverse problem is formulated and solved in order to determine the parameters of the compartmental SIR (Susceptible-Infectious-Recovered) model. To solve such inverse problem, the Differential Evolution (DE) algorithm is employed. After this step, two optimal control problems (mono- and multi-objective) to determine the optimal strategy for vaccine administration in COVID-19 pandemic treatment are proposed. The first consists of minimizing the quantity of infected individuals during the treatment. The second considers minimizing together the quantity of infected individuals and the prescribed vaccine concentration during the treatment, i.e., a multi-objective optimal control problem. The solution of each optimal control problems is obtained using DE and Multi-Objective Differential Evolution (MODE) algorithms, respectively. The results regarding the proposed multi-objective optimal control problem provides a set of evidences from which an optimal strategy for vaccine administration can be chosen, according to a given criterion.},
-  archiveprefix = {arXiv},
-  arxivid       = {2004.07397},
-  eprint        = {2004.07397},
-  file          = {:home/saul/Documents/Mendeley Desktop/Libotte et al/Unknown/Libotte et al. - 2020 - Determination of an Optimal Control Strategy for Vaccine Administration in COVID-19 Pandemic Treatment.pdf:pdf},
-  keywords      = {di ff erential,evolution algorithm,inverse problem,mathematical modeling of covid-19,multi-objective optimization,optimal control problem},
-  url           = {http://arxiv.org/abs/2004.07397},
-}
-
 @Article{Zhao2020,
   author    = {Zhao, Henry and Feng, Zhilan},
   title     = {{Staggered release policies for COVID-19 control: Costs and benefits of relaxing restrictions by age and risk}},
@@ -1204,40 +1162,12 @@ Contact matrices, demographic data and model parameters are available via the ci
   publisher = {Elsevier Inc.},
 }
 
-@Misc{cdmxDATA,
-  author = {{World Health Organization}},
-  title  = {{Datos abiertos sobre salud pública, acciones sociales y gasto público en la Ciudad de México.}},
-  month  = {Octber},
-  year   = {2020},
-  url    = {{https://datos.cdmx.gob.mx/pages/covid19/}},
-}
-
 @Misc{gitHub_b,
-  author    = {Varela-Salcedo, Gabriel G\'onzalez-S\'anchez, David and D\'iaz-Infante, Sa\'ul and Peñuñuri, Francisco},
+  author    = {Saul Diaz-Infante and Francisco Peñuñur and David Gonzalez-Sanchez and Gabriel Salcedo-Varela},
   title     = {{Source code for the manuscript Optimal Vaccine Policies for COVID-19}},
   year      = {2020},
   publisher = {GitHub},
-  url       = {%
-https://github.com/SaulDiazInfante/NovelCovid19-OptimalPiecewiseControlModelling.git
-    },
-}
-
-@Article{VandenDriessche2017a,
-  author    = {van den Driessche, Pauline},
-  title     = {{Reproduction numbers of infectious disease models}},
-  journal   = {Infectious Disease Modelling},
-  year      = {2017},
-  volume    = {2},
-  number    = {3},
-  pages     = {288--303},
-  month     = {aug},
-  issn      = {24680427},
-  abstract  = {This primer article focuses on the basic reproduction number, ℛ0, for infectious diseases, and other reproduction numbers related to ℛ0 that are useful in guiding control strategies. Beginning with a simple population model, the concept is developed for a threshold value of ℛ0 determining whether or not the disease dies out. The next generation matrix method of calculating ℛ0 in a compartmental model is described and illustrated. To address control strategies, type and target reproduction numbers are defined, as well as sensitivity and elasticity indices. These theoretical ideas are then applied to models that are formulated for West Nile virus in birds (a vector-borne disease), cholera in humans (a disease with two transmission pathways), anthrax in animals (a disease that can be spread by dead carcasses and spores), and Zika in humans (spread by mosquitoes and sexual contacts). Some parameter values from literature data are used to illustrate the results. Finally, references for other ways to calculate ℛ0 are given. These are useful for more complicated models that, for example, take account of variations in environmental fluctuation or stochasticity.},
-  doi       = {10.1016/j.idm.2017.06.002},
-  file      = {:C$\backslash$:/Users/adria/AppData/Local/Temp/1-s2.0-S2468042717300209-main.pdf:pdf},
-  keywords  = {Anthrax,Basic reproduction number,Cholera,Disease control,West Nile virus,Zika virus},
-  publisher = {Elsevier Ltd},
-  url       = {http://dx.doi.org/10.1016/j.idm.2017.06.002 https://linkinghub.elsevier.com/retrieve/pii/S2468042717300209},
+  url       = {https://github.com/SaulDiazInfante/NovelCovid19-OptimalPiecewiseControlModelling.git},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
