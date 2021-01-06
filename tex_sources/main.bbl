@@ -74,19 +74,17 @@ G.~B. Libotte, F.~S. Lobato, G.~M. Platt, A.~J. d.~S. Neto,
   (Accessed 2020).
 \newline\urlprefix\url{{https://www.who.int/healthinfo/statistics/GlobalDALYmethods\_2000\_2011.pdf}}
 
-\bibitem{cdmxDATA}
-{World Health Organization},
-  \href{{https://datos.cdmx.gob.mx/pages/covid19/}}{{Datos abiertos sobre salud
-  pública, acciones sociales y gasto público en la Ciudad de México.}}
-  (Octber 2020).
-\newline\urlprefix\url{{https://datos.cdmx.gob.mx/pages/covid19/}}
-
 \bibitem{Acuna2020}
 M.~A. Acu{\~n}a-Zegarra, M.~Santana-Cibrian, J.~X. Velasco-Hernandez, {Modeling
   behavioral change and COVID-19 containment in Mexico: A trade-off between
   lockdown and compliance}, Mathematical Biosciences 325 (2020) 108370 (2020).
 \newblock \href {https://doi.org/10.1016/j.mbs.2020.108370}
   {\path{doi:10.1016/j.mbs.2020.108370}}.
+
+\bibitem{DataMX}
+{Gobierno de M\'exico}, Datos abiertos,
+  \url{https://www.gob.mx/salud/documentos/datos-abiertos-152127} (2020
+  (Accessed November 10, 2020)).
 
 \bibitem{Van2002}
 P.~Van~den Driessche, J.~Watmough, Reproduction numbers and sub-threshold
@@ -166,44 +164,6 @@ M.~E. Alexander, C.~Bowman, S.~M. Moghadas, R.~Summers, A.~B. Gumel, B.~M.
   Journal on Applied Dynamical Systems 3~(4) (2004) 503--524 (2004).
 \newblock \href {https://doi.org/10.1137/030600370}
   {\path{doi:10.1137/030600370}}.
-
-\bibitem{Storn1997}
-R.~Storn, K.~Price, Differential evolution -- a simple and efficient heuristic
-  for global optimization over continuous spaces, Journal of Global
-  Optimization 11~(4) (1997) 341--352 (1997).
-\newblock \href {https://doi.org/https://doi.org/10.1023/A:1008202821328}
-  {\path{doi:https://doi.org/10.1023/A:1008202821328}}.
-
-\bibitem{Bilal2020}
-Bilal, M.~Pant, H.~Zaheer, L.~Garcia-Hernandez, A.~Abraham, Differential
-  evolution: A review of more than two decades of research, Engineering
-  Applications of Artificial Intelligence 90 (2020) 103479 (2020).
-\newblock \href
-  {https://doi.org/https://doi.org/10.1016/j.engappai.2020.103479}
-  {\path{doi:https://doi.org/10.1016/j.engappai.2020.103479}}.
-
-\bibitem{CANTUNetAl}
-K.~Cantún-Avila, D.~González-Sánchez, S.~Díaz-Infante, F.~Peñuñuri,
-  Optimizing functionals using differential evolution, Engineering Applications
-  of Artificial Intelligence 97 (2021) 104086 (2021).
-\newblock \href
-  {https://doi.org/https://doi.org/10.1016/j.engappai.2020.104086}
-  {\path{doi:https://doi.org/10.1016/j.engappai.2020.104086}}.
-
-\bibitem{Penunuri2016}
-F.~{Pe\~nu\~nuri}, C.~Cab, O.~Carvente, M.~Zambrano-Arjona, J.~Tapia, A study
-  of the classical differential evolution control parameters, Swarm and
-  Evolutionary Computation 26 (2016) 86 -- 96 (2016).
-\newblock \href {https://doi.org/https://doi.org/10.1016/j.swevo.2015.08.003}
-  {\path{doi:https://doi.org/10.1016/j.swevo.2015.08.003}}.
-
-\bibitem{gitHub_b}
-D.~Varela-Salcedo, Gabriel G\'onzalez-S\'anchez, S.~D\'iaz-Infante,
-  F.~Peñuñuri, \href{%
-  https://github.com/SaulDiazInfante/NovelCovid19-OptimalPiecewiseControlModelling.git}{{Source
-  code for the manuscript Optimal Vaccine Policies for COVID-19}} (2020).
-\newline\urlprefix\url{%
-  https://github.com/SaulDiazInfante/NovelCovid19-OptimalPiecewiseControlModelling.git}
 
 \bibitem{Kong2014}
 Q.~Kong, \href{https://doi.org/10.1007/978-3-319-11239-8}{A short course in

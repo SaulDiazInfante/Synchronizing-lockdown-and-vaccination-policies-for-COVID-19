@@ -19,7 +19,7 @@ incidence of new infected symptomatic cases $CI_S$
 follows a Poisson distribution with mean $\lambda_t = IC_s(t)$. Further,
 following ideas from \cite{Acuna2020} we postulate priors for $p$ and $\kappa$
 and count the commulative reported-confirmed cases in the CDMX-Valle de Mexico
-database \cite{cdmxDATA}
+database \cite{DataMX}
 \begin{equation}
     \label{eqn:boservation_model}
     \begin{aligned}
@@ -34,9 +34,8 @@ database \cite{cdmxDATA}
         & \kappa \sim \text{Gamma}(10, 50).
     \end{aligned}
 \end{equation}
-%
 \comment[id=SDIV]{Review this $R_0$ calculation with Gabriel}
-<<<<<<< HEAD:tex_sources/parameters_callibration.tex
+
 Using Van den Driessche's \cite{Van2002} definition of reproductive number
 we obtain
 \begin{equation*}
@@ -60,8 +59,8 @@ we obtain
         R_2 &= \mu + \delta_H + \gamma_S + \mu_{I_{S}}.
     \end{aligned}
 \end{equation*}
-=======
->>>>>>> 556be0e4dd15d8351e184ff4da1790e9f26cd928:tex_sources/parameters_callibration.tex
+
+
 
 \Cref{fig:data_CDMX} displays data of cumulative confirmed cases
 of COVID-19 in Mexico city, and \Cref{fig:data_CDMX_fitting} displays the fitted curve
