@@ -87,26 +87,58 @@ presence of vaccination.
 \comment{edit plot range to display level RV=1}
 \begin{figure*}[tbh]
     \centering
-      \includegraphics[scale=0.5, keepaspectratio]{Figures/Rv_contour}
-    \caption{R not contour plot as function of efficacy and vaccination rate.}
+      \includegraphics[scale=0.6, keepaspectratio]{Figures/Rv_contour}
+    \caption{
+    Contour plot  of $R_0^V$ as a function of $ \epsilon $ and $ \lambda_V $ and  
+        vaccine-induced
+        immunity average time of half year. orange line represents the 
+        value of $\lambda_{Vbase}=\num{0.000611}$, corresponding to a coverage 
+        $x_{coverage} = \num{0.2}$ and a horizon time $T=\num{365}$ days.
+        Intersection of black line and blue line show a scenario in which it is
+        possible to have the $R_V=0.65$, considering a vaccine efficacy of 
+        \num{0.8} and a vaccination rate 
+        of \num{0.7}.}
     \label{fig:rvcontour1}
 \end{figure*}
+
+\Cref{fig:rvcontour1} shows the efficacy of the vaccine
+as a function of the vaccination rate. The blue line, $ \varepsilon = 0.8 $,
+tells us what value of $ \lambda_V $ to take for which to have
+the level curve where $ R_0^V<1 $.
+
 \begin{figure*}[tbh]
     \centering
-      \includegraphics[scale=0.7, keepaspectratio]{COVID19-VACINATION/Figures/No-Lockdown-Vaccination.pdf}
-    \caption{No lockdown Region $R_v<1$.
+      \includegraphics[scale=0.7, keepaspectratio]{Figures/No-Lockdown-Vaccination}
+    \caption{
+        Vaccine efficacy versus vaccination rate feasibility.
+        In the gray shaded region $R_V<1 $ and in the white region $ R_V >1 $. 
+        Note that, for our scenario, we consider no lockdown individuals.
     \href{https://plotly.com/~AdrianSalcedo/52/}{%
 		https://plotly.com/~AdrianSalcedo/52/}
     }
     \label{fig:Nolockdown}
 \end{figure*}
 
+In the gray region of the \cref{fig:Nolockdown}, you can see
+the values of vaccine efficacy and vaccination rate for which
+$R_0^V <1 $. In this figure, we consider that the lockdown effect is not present.
+If we take $ \varepsilon = 0.2 $, we can see that we always have $ R_0^V> 1 $
+with which choice of $ \lambda_V $.
+
 \begin{figure*}[tbh]
     \centering
-      \includegraphics[scale=0.7, keepaspectratio]{COVID19-VACINATION/Figures/Lockdown-Vaccination.pdf}
-    \caption{lockdown Region $R_v<1$.
+      \includegraphics[scale=0.56, keepaspectratio]{Figures/Lockdown-Vaccination}
+    \caption{
+        Vaccine efficacy versus vaccination rate feasibility.
+        In the gray shaded region $R_V<1 $ and in the white region $ R_V >1 $. 
+        Note that, for our scenario, we consider lockdown individuals.
         \href{https://plotly.com/~AdrianSalcedo/54/}{%
 		https://plotly.com/~AdrianSalcedo/54/}
     }
     \label{fig:Lockdown}
 \end{figure*}
+
+In the\cref{fig:Lockdown}, we take into account that the lockdown effect is
+present. We can see that the gray region, $ R_0 ^ V <1 $, is much larger than in
+the figure. Note that we can choose smaller values for $ \varepsilon $ and $
+\lambda_V $ when we do have an individual lockdown.
