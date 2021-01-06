@@ -1,0 +1,237 @@
+\documentclass[a4paper,10pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage[numbers, comma, sort&compress]{natbib}
+
+\parindent=2em
+%opening
+
+\begin{document}
+    \author{SDIV, FPA, DGS, GASV}
+    \title{Some fucking title}
+    \maketitle
+
+    \begin{abstract}
+    
+    \end{abstract}
+
+    \section{Introduction}
+    \section{Model Formulation}
+        \paragraph{Hypothesis} We consider that susceptible individuals become 
+        infected when they are in contact with asymptomatic individuals and
+        individuals with symptoms, we will propose that a proportion of 
+        asymptomatic individuals have a way to get relief and not die. A 
+        proportion of individuals infected with symptoms may die from the 
+        disease or may be relieved. We will introduce two types of control, 
+        vaccination of asymptomatic infected and susceptible individuals and 
+        treatment of individuals infected with symptoms. 
+        \begin{equation}
+            \begin{aligned}
+                \dot{S}  &= 
+                    - \beta \frac{S}{N}(I_s+\alpha I_a) - u S
+                \\
+                \dot{I_a}  &= 
+                    p\beta \frac{S}{N}(I_s + \alpha I_a) - (\rho + u)I_a
+                 \\
+                \dot{I_s} &=
+                    (1 - p) \beta \frac{S}{N} (I_s + \alpha I_a) -
+                    (\gamma + \delta + v)I_s
+                \\
+                \dot{R_a} &= 
+                    \rho I_a
+                \\
+                \dot{R_s} &=
+                    \gamma I_s
+                \\
+                \dot{D} &=
+                    \delta I_s
+                \\
+                \dot{V} &=
+                    u(S+I_a)
+                \\
+                \dot{T} &=
+                    v I_s
+                \\
+                 &
+                     S(0) = S_0, 
+                     I_a(0) =I_{a_0}, 
+                     I_s(0) = I_{s_0}, 
+                \\
+                 &
+                     R_a(0)= R_{a_0}, 
+                     R_s(0)= R_{s_0},
+                \\
+                 &
+                     D(0) = D_0,
+                     T(0) = T_0,
+                \\
+                N(t) &= (S+I_a+I_s+R_a+R_s+D+V+T)(t) = cte.           
+                \\
+                &
+                0\leq u(t)\leq u_0, 0\leq v(t)\leq v_0,
+            \end{aligned}
+        \end{equation}
+	\begin{equation}
+		J(\vec{x},\vec{u}) = \int^T_0 (I_a(t)+I_s(t)+D(t)+d_1 u(t)+d_2v(t))dt
+	\end{equation}
+	where 
+	\begin{equation*}
+	\vec{x}=(S,I_a,I_s,R_a,R_s,D,V,T),\vec{u} =(u,v)
+	\end{equation*}
+    \section{Adimensional Model}
+    \begin{equation}
+        \begin{aligned}
+        	\dot{\tilde{S}}  &= 
+            	- \beta \tilde{S}(\tilde{I}_s
+            	+\alpha \tilde{I}_a) - u\tilde{S}
+        	\\
+        	\dot{E} & = \beta \tilde{S} (\tilde{I}_s + \alpha \tilde{I}_a)   
+                 - \kappa E 
+            	\\
+        	\dot{\tilde{I_a}}  &= 
+            	p \kappa \ E 
+            	- (\rho+u) \tilde{I}_a
+        	\\
+        	\dot{\tilde{I_s}} &=
+            	(1 - p) \kappa \ E 
+            	-( \gamma + \delta + v) \tilde{I}_s
+        	\\
+        	\dot{\tilde{R_a}} &= 
+            	\rho \tilde{I}_a
+        	\\
+        	\dot{\tilde{R_s}} &=
+        	\gamma \tilde{I}_s
+        	\\
+        	\dot{\tilde{D}} &=
+        	\delta \tilde{I}_s
+        	\\
+        	\dot{\tilde{V}} &=
+            u(\tilde{S} + \tilde{I}_a)
+        	\\
+        	\dot{\tilde{T}} &=
+            v \tilde{I}_s
+        	\\
+            	&
+            	\tilde{S}(0) = \tilde{S}_0, 
+            	\tilde{I}_a(0) =\tilde{I}_{a_0}, 
+            	\tilde{I}_s(0) = \tilde{I}_{s_0}, 
+        	\\
+        &
+            	\tilde{R}_a(0)= \tilde{R}_{a_0}, 
+            	\tilde{R}_s(0)= \tilde{R}_{s_0},
+        	\\
+        &
+            \tilde{D}(0) = \tilde{D}_0,
+            \tilde{T}(0) = \tilde{T}_0,
+        \\
+        N(t) &=
+        (
+            \tilde{S} + \tilde{I}_a + \tilde{I}_s + \tilde{R}_a
+            + \tilde{R}_s + \tilde{D} + \tilde{V} + \tilde{T} 
+        )(t) = 1.
+        \\
+        & 0\leq
+        \tilde{S},
+        \tilde{I}_a,
+        \tilde{I}_s,
+        \tilde{R}_a,
+        \tilde{R}_s,
+        \tilde{D},
+        \tilde{V}, 
+        \tilde{T} \leq 1
+        \\
+        &
+        0\leq u(t)\leq 1, \qquad
+        0\leq v(t)\leq 1,
+        \end{aligned}
+    \end{equation}
+    
+    \begin{equation}
+        J(\vec{\tilde{x}}, \vec{\tilde{u}}) = 
+        \int^T_0
+            \tilde{I}_a(t) +
+            \tilde{I}_s(t) +
+            \tilde{D}(t) +
+            d_1 u(t) + d_2v(t) 
+        dt
+    \end{equation}
+    
+    \section{SEIR version}
+       Here we propose a SEIR struture which considers hospitlized 
+    compartiment $ H $. To overcome stability issues we also consider 
+    vital dynamics.
+    \begin{equation}
+        \label{eqn:vital_dynamics}
+        \begin{aligned}
+            \min_{u \in \mathcal{U}} &=
+            \int_{0}^T
+                \left(
+                    a_{I_S} I_S
+                    + a_{H} H
+                    + a_{D} D
+                    + 
+                    \frac{a_{L}}{2}  u_L ^ 2
+                    + 
+                    \frac{a_{V}}{2} u_V ^ 2 
+                    + 
+                    \frac{a_{H}}{2} u_H ^ 2 
+                    + 
+                    \frac{a_{M}}{2} u_M ^ 2 
+                \right)
+                dt
+            \\
+            \text{s. t.}
+            \\
+            L' & = 
+                -\epsilon \lambda L - u_L(t) L - \mu L
+            \\
+            S' & =
+                \mu N^\star + u_L(t) L + (1 - \widehat{q}) \gamma_V V 
+                - \lambda S - u_V(t) S - \mu S
+            \\
+            E' & =
+                \lambda (\epsilon L + S) - \kappa E - \mu E
+            \\
+            I_S' & =
+                p \kappa E - (\gamma_S + \mu_{I_S} + \delta_H) I_S 
+                - u_M(t) I_S + (1 - q) \gamma_M M(t)
+                - \mu I_S
+            \\
+            I_A' &=
+                (1 - p) \kappa E - \gamma_A I_A - \mu I_A
+            \\
+            M' &=
+                u_M(t) I_S - \gamma_M M - \mu M
+            \\
+            H' &=
+                \delta_H I_S - (\gamma_H + \mu_H) H - u_H(t) H - \mu H
+            \\
+            R' & =
+                \gamma_S I_S + \gamma_A I_A + \gamma_H H + q \gamma_M M
+                + u_H(t) H + \widehat{q} \gamma_V V - \mu R
+            \\
+            D' &=
+                \mu_{I_S} I_S + \mu_H H
+            \\
+            V' &=
+                u_V(t) S  - \gamma_V  V  - \mu V
+            \\
+            \lambda &:=
+                \frac{\beta_A I_A + \beta_S I_S}{N^{\star}}
+            \\
+            N^{\star}(t) &=
+                L + S +E + I_S + I_A +
+                M + H + R + V
+        \end{aligned}
+    \end{equation}
+    \paragraph{Minima Squares}
+        \paragraph{Likelihood}
+        \paragraph{Bayesian}
+    \section{Optimal control problem}
+    \section{Numerical Results}
+\end{document}
