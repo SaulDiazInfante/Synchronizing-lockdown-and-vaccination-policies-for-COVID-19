@@ -1,0 +1,8 @@
+{
+    "editor.fontSize": 8,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "same",
+    "editor.wordWrapColumn": 80,
+    "editor.rulers": [ 80 ],
+    "editor.minimap.maxColumn": 60
+}
