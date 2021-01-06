@@ -1,0 +1,64 @@
+\documentclass[3p, sort&compress]{elsarticle}
+%\documentclass[sort&compress, preprint]{elsarticle}
+%\documentclass{cas-sc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}{}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{lineno, hyperref}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage[draft]{changes}
+\usepackage[section]{placeins}
+\usepackage[]{algorithm,algcompatible,lipsum}
+\usepackage[]{algpseudocode}
+%
+\modulolinenumbers[1]
+\definechangesauthor[color=orange]{SDIV}
+\linenumbers
+\newdefinition{hypotheses}{Hypothesis}
+\newdefinition{assumptions}{Assumptions}
+\newdefinition{rmk}{Remark}
+
+\begin{document}
+    \input{frontmatter}
+    \section{Introduction}
+        \input{introduction}
+    \section{Covid-19 spread dynamics}
+        \label{sec:Covid19_spread}
+        \input{model_formulation}
+        \subsection{Parameter calibration}
+            \input{parameters_callibration}
+    \section{Imperfect-preventive COVID-19 vaccination}
+        \label{sec:vaccination_model}
+        \input{vaccination_model}
+    \section{Lockdown-Vaccination reproductive number}
+        \label{sec:reproductive_number}
+        \input{vaccination_r_not}
+    \section{Optimal controlled version}
+        \label{sec:optimal_controlled}
+        \input{cotrolled_version}
+    \section{Numerical Experiments}
+        \label{sec:numerical_experiments}
+        \input{DifferentiaEvolution}
+        \input{simulation}
+    \section{Conclusion}
+        \input{conclusion}
+    \section*{Data availability}
+        \input{info_repo}
+    \section*{Authors’ contributions}
+    \input{author_contributions}
+    \section*{Conflicts of interest}
+    The authors have no competing interests.
+    \label{sec:conclusion}
+    \appendix
+    \section{Existence of optimal policies}
+        \input{appendix}
+        \bibliography{NovelCovid19.bib}
+        %\bibliographystyle{plain}
+    \bibliographystyle{elsarticle-num}
+\end{document}
