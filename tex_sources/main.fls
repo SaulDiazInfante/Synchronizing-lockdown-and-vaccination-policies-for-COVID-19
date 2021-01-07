@@ -363,7 +363,7 @@ INPUT ./Figures/Diagrma_Vaccination.pdf
 INPUT ./Figures/Diagrma_Vaccination.pdf
 INPUT vaccination_r_not.tex
 INPUT vaccination_r_not.tex
-INPUT Figures/Rv_contour.pdf
+INPUT ./Figures/Rv_contour.pdf
 INPUT ./Figures/Rv_contour.pdf
 INPUT ./Figures/Rv_contour.pdf
 INPUT ./Figures/No-Lockdown-Vaccination.pdf
@@ -423,6 +423,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb

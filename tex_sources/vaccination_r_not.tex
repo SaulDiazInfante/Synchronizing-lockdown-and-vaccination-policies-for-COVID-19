@@ -56,7 +56,9 @@ If we consider that there is no lockdown, then  $ R_0 $ results
     \end{aligned}
 \end{equation*}
 %
-Note that we have the relation $ R_0 \leq \tilde{R}_0 $. These indicate that there is greater transmission of the disease if there is no lockdown.
+Note that we have the relation $ R_0 \leq \tilde{R}_0 $. These indicate that there is greater
+ transmission of the disease if there is no lockdown.
+%
 \comment[id=SDIV]{%
     Here countor plots figure as function of efficacy and
     vaccination rate%
@@ -99,9 +101,10 @@ in order to reduce the value of $R_V$ below one. Note that in this case
 we require vaccine efficacy of \SI{60}{\percent} or more and
 adequate vaccination rate to drive $R_0^V$ bellow one.
 \comment{edit plot range to display level RV=1}
+
 \begin{figure*}[tbh]
     \centering
-      \includegraphics[scale=0.6, keepaspectratio]{Figures/Rv_contour}
+      \includegraphics[scale=0.6, keepaspectratio]{Rv_contour}
     \caption{
     Contour plot  of $R_0^V$ as a function of $ \epsilon $ and $ \lambda_V $ and  
         vaccine-induced
@@ -114,41 +117,27 @@ adequate vaccination rate to drive $R_0^V$ bellow one.
         of \num{0.7}.}
     \label{fig:rvcontour1}
 \end{figure*}
-<<<<<<< HEAD
-%
-\begin{figure*}[tbh]
-    \centering
-      \includegraphics[scale=0.7, keepaspectratio]{No-Lockdown-Vaccination.pdf}
-    \caption{No lockdown Region $R_v<1$.
-=======
 
-\Cref{fig:rvcontour1} shows the efficacy of the vaccine
+%\Cref{fig:rvcontour1} 
+shows the efficacy of the vaccine
 as a function of the vaccination rate. The blue line, $ \varepsilon = 0.8 $,
 tells us what value of $ \lambda_V $ to take for which to have
 the level curve where $ R_0^V<1 $.
-
+%
 \begin{figure*}[tbh]
     \centering
-      \includegraphics[scale=0.7, keepaspectratio]{Figures/No-Lockdown-Vaccination}
+      \includegraphics[scale=0.7, keepaspectratio]{No-Lockdown-Vaccination}
     \caption{
         Vaccine efficacy versus vaccination rate feasibility.
         In the gray shaded region $R_V<1 $ and in the white region $ R_V >1 $. 
         Note that, for our scenario, we consider no lockdown individuals.
->>>>>>> origin/overleaf-2021-01-06-2308
     \href{https://plotly.com/~AdrianSalcedo/52/}{%
 		https://plotly.com/~AdrianSalcedo/52/}
     }
     \label{fig:Nolockdown}
 \end{figure*}
-<<<<<<< HEAD
 %
 %
-\begin{figure*}[tbh]
-    \centering
-      \includegraphics[scale=0.7, keepaspectratio]{Lockdown-Vaccination.pdf}
-    \caption{lockdown Region $R_v<1$.
-=======
-
 In the gray region of the \cref{fig:Nolockdown}, you can see
 the values of vaccine efficacy and vaccination rate for which
 $R_0^V <1 $. In this figure, we consider that the lockdown effect is not present.
@@ -157,22 +146,15 @@ with which choice of $ \lambda_V $.
 
 \begin{figure*}[tbh]
     \centering
-      \includegraphics[scale=0.56, keepaspectratio]{Figures/Lockdown-Vaccination}
-    \caption{
+      \includegraphics[scale=0.56, keepaspectratio]{Lockdown-Vaccination}
+    \caption{%
         Vaccine efficacy versus vaccination rate feasibility.
         In the gray shaded region $R_V<1 $ and in the white region $ R_V >1 $. 
-        Note that, for our scenario, we consider lockdown individuals.
->>>>>>> origin/overleaf-2021-01-06-2308
-        \href{https://plotly.com/~AdrianSalcedo/54/}{%
-		https://plotly.com/~AdrianSalcedo/54/}
-    }
+        Note that, for our scenario, we consider lockdown individuals.}
     \label{fig:Lockdown}
 \end{figure*}
-<<<<<<< HEAD
-=======
-
+%
 In the\cref{fig:Lockdown}, we take into account that the lockdown effect is
-present. We can see that the gray region, $ R_0 ^ V <1 $, is much larger than in
-the figure. Note that we can choose smaller values for $ \varepsilon $ and $
-\lambda_V $ when we do have an individual lockdown.
->>>>>>> origin/overleaf-2021-01-06-2308
+present. We can see that the gray region, $R_0^V<1 $, is much larger than in
+the figure. Note that we can choose smaller values for $ \varepsilon $ and 
+$\lambda_V $ when we do have an individual lockdown.
