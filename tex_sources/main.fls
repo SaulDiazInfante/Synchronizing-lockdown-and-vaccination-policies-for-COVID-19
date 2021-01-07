@@ -344,13 +344,9 @@ INPUT model_formulation.tex
 INPUT Figures/no_contraled_dynamics.pdf
 INPUT ./Figures/no_contraled_dynamics.pdf
 INPUT ./Figures/no_contraled_dynamics.pdf
-INPUT ./Figures/Diagrma_Vaccination.pdf
-INPUT ./Figures/Diagrma_Vaccination.pdf
-INPUT ./Figures/Diagrma_Vaccination.pdf
 INPUT Figures/cdmx_input_data.pdf
 INPUT ./Figures/cdmx_input_data.pdf
 INPUT ./Figures/cdmx_input_data.pdf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT parameters_callibration.tex
 INPUT parameters_callibration.tex
 INPUT ./cdmx_CIs_data_begining_fit.pdf
@@ -358,9 +354,6 @@ INPUT ./cdmx_CIs_data_begining_fit.pdf
 INPUT ./cdmx_CIs_data_begining_fit.pdf
 INPUT vaccination_model.tex
 INPUT vaccination_model.tex
-INPUT Figures/Diagrma_Vaccination.pdf
-INPUT ./Figures/Diagrma_Vaccination.pdf
-INPUT ./Figures/Diagrma_Vaccination.pdf
 INPUT vaccination_r_not.tex
 INPUT vaccination_r_not.tex
 INPUT ./Figures/Rv_contour.pdf
@@ -383,6 +376,7 @@ INPUT simulation.tex
 INPUT figs/InitialCondition.png
 INPUT ./figs/InitialCondition.png
 INPUT ./figs/InitialCondition.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT figs/lockdown_control_signal.pdf
 INPUT ./figs/lockdown_control_signal.pdf
@@ -413,7 +407,6 @@ INPUT ./main.out
 INPUT ./main.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb

@@ -1,5 +1,4 @@
 %!TEX root = main.tex
-\paragraph{Controlled Model}
 Now wee model vaccination, treatment and lockdown as a optimal control problem.
 According to dynamics in \Cref{eqn:base_dynamics}, we modulate the vaccination
 rate with a time-dependent control signal  $u_V(t)$. We add
@@ -37,7 +36,6 @@ strategy policy via the penalization functional
 In other words, we assume in functional $J$ that pandemic cost is proportional
 to the symptomatic hospitalized and death reported cases and that a vaccination
 and lockdown policies implies quadratic consumption of resources.
-\comment[id=SDIV]{Write explication in the context of DALYs}
 
     Further, since we aim to simulate vaccination policies at different coverage
 scenarios, we impose the vaccination counter state's final time condition
@@ -91,7 +89,7 @@ constrain in \eqref{eqn:path_constrain}.
 That is, we search for vaccination policies $u_V(\cdot)$, which
 solve the following optimal control problem (OCP).
 \begin{equation}
-    \label{eqn:vital_dynamics}
+    \label{eqn:lockdown_vaccination_ocp}
     \begin{aligned}
         \min_{\mathbf{u} \in \mathcal{U}}
             J(u_L, u_V) := &
@@ -202,13 +200,3 @@ solve the following optimal control problem (OCP).
                 H + R + V
         \end{aligned}
 \end{equation}
-
-The policies we are considering in the OCP are piecewise constant; see the Appendix for details. OCPs with this class of policies have been
-    studied in different contexts. For instance, a solution method based on the
-    gradient of the cost functional is studied in \cite{MR3223602}; convergence
-    results of piecewise constant solutions to permanent solutions in
-    linear-quadratic problems are given in \cite{MR3627992}; or, in
-    \cite{CANTUNetAl}, a general numerical methodology to find piecewise
-    constant solutions is proposed. In fact, to find the optimal policies we use the methodology \cite{CANTUNetAl}. Even though the existence of solutions to OCPs in the class of piecewise constant policies is known, for completeness, we sketch a straightforward proof in the Appendix under assumptions that hold for the OCP described above.   
-
-

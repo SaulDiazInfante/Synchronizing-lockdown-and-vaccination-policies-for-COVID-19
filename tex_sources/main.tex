@@ -16,12 +16,14 @@
 \usepackage[section]{placeins}
 \usepackage[]{algorithm,algcompatible,lipsum}
 \usepackage[]{algpseudocode}
-\graphicspath{{./Figures/}{./figs/}}
+%
 \modulolinenumbers[1]
 \definechangesauthor[color=orange]{SDIV}
 \linenumbers
 \newdefinition{hypotheses}{Hypothesis}
 \newdefinition{assumptions}{Assumptions}
+\newdefinition{rmk}{Remark}
+\graphicspath{{./Figures/}{./figs/}}
 \begin{document}
     \input{frontmatter}
     \section{Introduction}
@@ -45,8 +47,14 @@
         \input{DifferentiaEvolution}
         \input{simulation}
     \section{Conclusion}
+        \input{conclusion}
+    \section*{Data availability}
+        \input{info_repo}
+    \section*{Authors’ contributions}
+    \input{author_contributions}
+    \section*{Conflicts of interest}
+    The authors have no competing interests.
     \label{sec:conclusion}
-    \listofchanges[style=compactsummary]
     \appendix
     \section{Existence of optimal policies}
         \input{appendix}
