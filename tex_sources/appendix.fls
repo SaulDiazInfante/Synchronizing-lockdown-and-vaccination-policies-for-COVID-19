@@ -1,6 +1,0 @@
-PWD /home/saul/sauld@cimat.mx/UNISON/Articles/NovelCovid-19/NovelCovid19-ControlModelling/NovelCovid19-ControlModellingGitHub/UNISON-UADY-VACCINATION-PRJ/tex_sources/COVID-19-UNISON-UADY
-INPUT /usr/local/texlive/2019/texmf.cnf
-INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT appendix.tex
-OUTPUT appendix.log

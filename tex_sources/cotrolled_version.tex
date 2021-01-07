@@ -1,4 +1,5 @@
 %!TEX root = main.tex
+\paragraph{Controlled Model}
 Now wee model vaccination, treatment and lockdown as a optimal control problem.
 According to dynamics in \Cref{eqn:base_dynamics}, we modulate the vaccination
 rate with a time-dependent control signal  $u_V(t)$. We add
@@ -36,6 +37,7 @@ strategy policy via the penalization functional
 In other words, we assume in functional $J$ that pandemic cost is proportional
 to the symptomatic hospitalized and death reported cases and that a vaccination
 and lockdown policies implies quadratic consumption of resources.
+\comment[id=SDIV]{Write explication in the context of DALYs}
 
     Further, since we aim to simulate vaccination policies at different coverage
 scenarios, we impose the vaccination counter state's final time condition
@@ -89,7 +91,7 @@ constrain in \eqref{eqn:path_constrain}.
 That is, we search for vaccination policies $u_V(\cdot)$, which
 solve the following optimal control problem (OCP).
 \begin{equation}
-    \label{eqn:lockdown_vaccination_ocp}
+    \label{eqn:vital_dynamics}
     \begin{aligned}
         \min_{\mathbf{u} \in \mathcal{U}}
             J(u_L, u_V) := &
