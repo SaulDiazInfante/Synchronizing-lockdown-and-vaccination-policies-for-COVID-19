@@ -1,38 +1,29 @@
-%!TEX root = main.tex
-\subsection{Methodology}
-    We simulate and scenario corresponding to a hypothetical but plausible
-initial conditions and parameters. We integrate model in
-\Cref{eqn:lockdown_vaccination_ocp} by classic Runge Kutta scheme and solve the
-optimization stage with the so called Differntial Evolution method.
-Differential Evolution (DE) \cite{Storn1997} is an evolutionary
-algorithm successfully employed for global optimization
-\cite{Bilal2020}. The method is designed to optimize functions
-$f:\mathbb{R}^n \to \mathbb{R}$. Nevertheless, DE can be applied to
-optimize a functional as stated in \cite{CANTUNetAl}. The method can be
-coded following Algorithm \ref{alg:DE1}, where an initial random
-population on the search space $\mathcal{V}$ of size $N_p$ is subjected
-to mutation, crossover and selection. After this process a new
-population is created which, again would be subjected to the
-evolutionary process. This process is repeated until some stopping
+\comment[id=SDIV]{Aqui va tu descripcion Frank. }
+
+Differential Evolution (DE) \cite{Storn1997} is an evolutionary 
+algorithm successfully employed for global optimization 
+\cite{Bilal2020}. The method is designed to optimize functions 
+$f:\mathbb{R}^n \to \mathbb{R}$. Nevertheless, DE can be applied to 
+optimize a functional as stated in \cite{CANTUNetAl}. The method can be 
+coded following Algorithm \ref{alg:DE1}, where an initial random 
+population on the search space $\mathcal{V}$ of size $N_p$ is subjected 
+to mutation, crossover and selection. After this process a new 
+population is created which, again would be subjected to the 
+evolutionary process. This process is repeated until some stopping 
 criteria is fulfilled. Finally the best individual (according to some
-objective function $f_{ob}$ to optimize) is extracted. These operations
-are conducted by the operators $\mathbf{X}_0$, $\mathbf{M}$,
-$\mathbf{C}$, $\mathbf{S}$, $\mathbf{x}_{best}$;  whose explicit form
-are coded in \cite{Penunuri2016}.
+objective function $f_{ob}$ to optimize) is extracted. These operations 
+are conducted by the operators $\mathbf{X}_0$, $\mathbf{M}$, 
+$\mathbf{C}$, $\mathbf{S}$, $\mathbf{x}_{best}$;  whose explicit form 
+are coded in \cite{Penunuri2016}. 
 
-In the optimization of this study
+In the optimization of this study 
 the mutation scale factor $F$ and the crossover probability $C_r$ were
-taken as 1 and 0.3 respectively, additional $N_p$ has been taken as 4
+taken as 1 and 0.3 respectively, additional $N_p$ has been taken as 4 
 times the number of parameters (the dimension of the vector used to
-describe the two controls\textemdash see \cite{CANTUNetAl}), which in our case was
-of 180. As stopping criteria we have used a maximum number of
-generations which is taken as \num{5000}.
-
-    We provide in \cite{gitHub_b} a GitHub repository with all regarding R
-and Fortran sources for the sake of reproductivity. This repository also
-encloses data sources and a Wolfrang Mathematica notebook to reproduce all
-reported figures.
-
+describe the two controls--see \cite{CANTUNetAl}), which in our case was 
+of 180. As stopping criteria we have used a maximum number of 
+generations which is taken as 5000. Whit these values an excellent 
+convergence is achieved as can be seen in figs...
 
 \begin{algorithm}[htb]
   \caption{Differential Evolution Algorithm}
