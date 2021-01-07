@@ -1,4 +1,5 @@
 %!TEX root = main.tex
+\paragraph{Uncontrolled dynamics}
     We split a given population of size $N$ in the basic SEIR
 structure with segregated classes according to the manifestation
 of symptoms. Let $L, S, E, I_S, I_A, H, R, D$ respectively denote the
@@ -72,9 +73,12 @@ Thus we formulate the following Ordinary Differential Equation (ODE)
 \begin{equation}
 	\label{eqn:base_dynamics}
     \begin{aligned}
+        L' & = \theta \mu N^{\star}
+        	-\epsilon \lambda L - \delta_L L - \mu L,
+        \\
         S' & =
-            \mu N^\star + \delta_R R - (\lambda + \mu)
-            S,
+            (1 - \theta)\mu N^\star + \delta_L  L + \delta_R R
+            - (\lambda + \mu) S,
         \\
         E' & =
             \lambda (\epsilon L + S) - (\kappa + \mu) E,
@@ -110,23 +114,17 @@ Thus we formulate the following Ordinary Differential Equation (ODE)
     \end{aligned}
 \end{equation}
 %
-\begin{figure}
     \begin{center}
         \includegraphics[scale=0.25,
         keepaspectratio]{Figures/no_contraled_dynamics}
     \end{center}
-    \caption{
-        Spreed dynamics of COVID-19 according to model in
-        \Cref{eqn:base_dynamics}.
-    }
-\end{figure}
 
      See \Cref{tbl:dynamics_base_parameters} for notation and references
      values.
      \added[id=SDIV, comment={use WPS}]{Put here the flow diagram}
      \begin{figure*}[tbh]
     \centering
-      \includegraphics[scale=0.6, keepaspectratio]{Diagrma_Vaccination}
+      \includegraphics[scale=0.6, keepaspectratio]{Figures/Diagrma_Vaccination}
     \caption{Flow diagram of \cref{eqn:base_dynamics}}
     \label{fig:Flowdiagram}
 \end{figure*}
@@ -165,7 +163,7 @@ Thus we formulate the following Ordinary Differential Equation (ODE)
 			New asymptomatic generation proportion
 		\\
 	    $\theta$ &
-        	Proportion of suceptible individuals under lockdown
+        	Proportion of individuals under lockdown
         \\
         $\gamma_{S}^{-1}$ &
         	Average time of symptomatic recovery
@@ -196,7 +194,7 @@ Thus we formulate the following Ordinary Differential Equation (ODE)
     \caption{%
         Cumulative new symptomatic and confirmed COVID19 reported cases from
         Ciudad de Mexico and Valle de Mexico
-        \cite{cdmxDATA} between March, 10, to March 30 of
+        [CITE] between March, 10, to March 30 of
         2020.
         \href{https://plotly.com/~AdrianSalcedo/48/}{%
 		https://plotly.com/~AdrianSalcedo/48/}
